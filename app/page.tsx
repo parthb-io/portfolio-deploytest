@@ -61,7 +61,7 @@ export default function Home() {
               C++,
             </a>{" "}
             databases, I love building seamless digital experiences. My journey
-            in the world of code began <span className="text-bold">5</span> years ago, and I've been hooked ever
+            in the world of code began <span className="text-bold">5</span> years ago, and I&apos;ve been hooked ever
             since.
           </p>
           {/* <p

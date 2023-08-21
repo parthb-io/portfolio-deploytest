@@ -116,7 +116,7 @@ export const Navbar = () => {
             <DiscordIcon className="text-default-500" />
           </Link> */}
               <DropdownItem key="web">Web Development</DropdownItem>
-			  <DropdownItem key="ai" isDisabled>AI &apos; LLM's</DropdownItem>
+			  <DropdownItem key="ai" isDisabled>AI & LLM&apos;s</DropdownItem>
 			  <DropdownItem key="cyber" isDisabled>CyberSecurity</DropdownItem>
 			  <DropdownItem key="web3" isDisabled>Web 3 &apos; Crytpography</DropdownItem>
 			  <DropdownItem key="podcasts" isDisabled>Podcasts</DropdownItem>
