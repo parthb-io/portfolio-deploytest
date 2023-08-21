@@ -5,21 +5,22 @@ import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
 import { Input } from "@nextui-org/input";
+import {
+  Table,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
+  RadioGroup,
+  Radio,
+} from "@nextui-org/react";
+import { Chip } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
-import { Link } from "@nextui-org/link";
+import { AnchorIcon } from "./anchor-icon";
 
 export const infotainment = () => {
-  const [isFollowed, setIsFollowed] = React.useState(false);
-  const [value, setValue] = React.useState("junior2nextui.org");
-
-  const validateEmail = (value: string) => value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
-
-  const validationState = React.useMemo(() => {
-    if (value === "") return undefined;
-
-    return validateEmail(value) ? "valid" : "invalid";
-  }, [value]);
-
   return (
     <>
       {/* infotainment cards */}
@@ -43,6 +44,7 @@ export const infotainment = () => {
             <p className="text-tiny ">Available soon.</p>
           </CardFooter>
         </Card>
+        {/* Card 2 */}
         <Card className="relative col-span-12 sm:col-span-6 h-[400px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
@@ -71,88 +73,96 @@ export const infotainment = () => {
           </CardHeader>
           <Divider />
           <CardBody className="mb-4">
-            <ol className="mt-6 space-y-4">
+            <ol className="mt-3 space-y-4">
               <li className="flex gap-4">
                 <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                  <img
-                    alt=""
-                    loading="lazy"
-                    width="32"
-                    height="32"
-                    decoding="async"
-                    data-nimg="1"
-                    className="h-7 w-7"
-                    src="/_next/static/media/planetaria.ecd81ade.svg"
+                  <Image
+                    alt="nextui logo"
+                    height={24}
+                    radius="sm"
+                    src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                    width={24}
                   />
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
-                  <dt className="sr-only">Company</dt>
-                  <dd className="w-full flex-none ">
+                  <dt className="sr-only ">Company</dt>
+                  <dd className="w-full flex-none text-md ">
                     Full-stack Developer / Project Manager
                   </dd>
                   <dt className="sr-only hidden sm:block">Role</dt>
-                  <dd className="mt-1 hidden  sm:block">VebCommerce</dd>
-                  <dt className="sr-only">Date</dt>
-                  <dd className="ml-auto mt-1 " aria-label="2019 until Present">
+                  <dd className="mt-1 hidden text-tiny sm:block">
+                    VebCommerce
+                  </dd>
+                  <dt className="sr-only hidden">Date</dt>
+                  <dd
+                    className="ml-auto mt-1 text-tiny text-blue-500"
+                    aria-label="2022 till 2023"
+                  >
                     <time dateTime="2019">2022</time>{" "}
                     <span aria-hidden="true">—</span>{" "}
                     <time dateTime="2023">2023</time>
                   </dd>
                 </dl>
               </li>
+              <Divider />
               <li className="flex gap-4">
-                <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                  <img
-                    alt=""
-                    loading="lazy"
-                    width="28"
-                    height="28"
-                    decoding="async"
-                    data-nimg="1"
-                    className="h-7 w-7"
-                    src="/_next/static/media/airbnb.b4000690.svg"
+                <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <Image
+                    alt="nextui logo"
+                    height={24}
+                    radius="sm"
+                    src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                    width={24}
                   />
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
                   <dt className="sr-only">Company</dt>
-                  <dd className="w-full flex-none ">
+                  <dd className="w-full text-md flex-none ">
                     Web Developer / Project Co-ordinator
                   </dd>
                   <dt className="sr-only hidden sm:block">Role</dt>
-                  <dd className="hidden sm:block">Lofcart Alberta Ltd</dd>
+                  <dd className="hidden sm:block text-tiny">
+                    Lofcart Alberta Ltd
+                  </dd>
                   <dt className="sr-only">Date</dt>
-                  <dd className="ml-auto " aria-label="2014 until 2019">
+                  <dd
+                    className="ml-auto text-tiny text-blue-500 "
+                    aria-label="2021 until 2022"
+                  >
                     <time dateTime="2014">2021</time>{" "}
                     <span aria-hidden="true">—</span>{" "}
                     <time dateTime="2019">2022</time>
                   </dd>
                 </dl>
               </li>
+              <Divider />
               <li className="flex gap-4">
-                <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                  <img
-                    alt=""
-                    loading="lazy"
-                    width="28"
-                    height="28"
-                    decoding="async"
-                    data-nimg="1"
-                    className="h-7 w-7"
-                    src="/_next/static/media/facebook.dd9e7d48.svg"
+                <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <Image
+                    alt="nextui logo"
+                    height={24}
+                    radius="sm"
+                    src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                    width={24}
                   />
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
                   <dt className="sr-only">Company</dt>
-                  <dd className="w-full flex-none ">
+                  <dd className="w-full flex-none text-md ">
                     Computer Programmer / Diploma Program
                   </dd>
                   <dt className="sr-only hidden sm:block">Role</dt>
-                  <dd className="hidden  sm:block">Georgian College</dd>
+                  <dd className="hidden  sm:block text-tiny">
+                    Georgian College
+                  </dd>
                   <dt className="sr-only">Date</dt>
-                  <dd className="ml-auto " aria-label="2011 until 2014">
-                    <time dateTime="2011">2018</time>{" "}
+                  <dd
+                    className="ml-auto text-tiny text-blue-500"
+                    aria-label="2018 until 2021"
+                  >
+                    <time dateTime="2018">2018</time>{" "}
                     <span aria-hidden="true">—</span>{" "}
-                    <time dateTime="2014">2021</time>
+                    <time dateTime="2021">2021</time>
                   </dd>
                 </dl>
               </li>
@@ -163,34 +173,154 @@ export const infotainment = () => {
             <Button
               href="https://docs.google.com/document/d/1L8xBEcyQcA0kBVaIT4wzzeqeyO9zXk7WeTDBUyzFytE/edit?usp=sharing"
               as={Link}
-              color="primary"
+              color="default"
               showAnchorIcon
-              variant="solid"
+              variant="bordered"
             >
               Download Cv
             </Button>
           </CardFooter>
         </Card>
-        {/* card 2 */}
-        <Card className="col-span-12 sm:col-span-6 h-[400px]">
-          {/* <CardHeader className="absolute  top-1 flex-col  ">
-      
-      <div className="mb-2 flex items-center justify-end">
-                <a className="mr-2 rounded-full bg-emerald-200 p-1" href="#">
-                  <div className="h-2 w-2 rounded-full bg-emerald-600"></div>
-                </a>
-                <a className="mr-3 h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-                <a className="mr-3 h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-                <a className="h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-              </div>
-              <h2 className="font-heading mb-5 border-b border-gray-200 pb-2 font-semibold text-emerald-500">Ongoing Project</h2>
-              <div className=" mb-4">
-                <h2 className="font-heading text-2xl font-semibold ">Bantsy-AI</h2>
-                <p className="font-heading mt-1 text-sm ">OpenAI. SaaS. Nextjs</p>
-              </div>
-              
-      </CardHeader> */}
 
+        <Card className="col-span-12 sm:col-span-6 h-[400px]">
+          <CardHeader className="justify-between">
+            <div className="flex gap-5">
+              <Image
+                alt="nextui logo"
+                height={40}
+                radius="sm"
+                src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                width={40}
+              />
+              <div className="flex flex-col">
+                <p className="text-md">Bantsy-AI</p>
+                <p className="text-small text-emerald-500 text-default-500">
+                  Ongoing Project
+                </p>
+              </div>
+            </div>
+            <div className="mb-2 flex items-center justify-end">
+              <a className="mr-2 rounded-full bg-emerald-200 p-1" href="#">
+                <div className="h-2 w-2 rounded-full bg-emerald-600"></div>
+              </a>
+              <a className="mr-3 h-1 w-1 rounded-full bg-gray-200" href="#"></a>
+              <a className="mr-3 h-1 w-1 rounded-full bg-gray-200" href="#"></a>
+              <a className="h-1 w-1 rounded-full bg-gray-200" href="#"></a>
+            </div>
+          </CardHeader>
+          <Divider />
+
+          <CardBody>
+            <div className="flex flex-col p-1 gap-6">
+              <Table
+                color={"success"}
+                selectionMode="single"
+                defaultSelectedKeys={["2"]}
+                aria-label="Example static collection table"
+              >
+                <TableHeader className="bg-transparent border-1 border-default-200">
+                  <TableColumn>PROJECT</TableColumn>
+                  <TableColumn className="hidden lg:block">ROLE</TableColumn>
+                  <TableColumn>STATUS</TableColumn>
+                </TableHeader>
+                <TableBody>
+                  <TableRow key="1">
+                    <TableCell>
+                      <Link
+                        size="sm"
+                        color="foreground"
+                        isExternal
+                        showAnchorIcon
+                        href="https://github.com/nextui-org/nextui"
+                        anchorIcon={<AnchorIcon />}
+                      >
+                        William Howard
+                      </Link>
+                    </TableCell>
+                    <TableCell className="hidden lg:block">Web Developer</TableCell>
+                    <TableCell><Chip size="sm" color="success" variant="light">Active</Chip></TableCell>
+                  </TableRow>
+                  <TableRow key="2">
+                    <TableCell>
+                      <Link
+                        size="sm"
+                        color="foreground"
+                        isExternal
+                        showAnchorIcon
+                        href="https://github.com/nextui-org/nextui"
+                        anchorIcon={<AnchorIcon />}
+                      >
+                        William Howard
+                      </Link>
+                    </TableCell>
+                    <TableCell className="hidden lg:block">FullStack Dev</TableCell>
+                    <TableCell><Chip size="sm" color="primary" variant="light">Paused</Chip></TableCell>
+                  </TableRow>
+                  <TableRow key="3">
+                    <TableCell>
+                      <Link
+                        size="sm"
+                        color="foreground"
+                        isExternal
+                        showAnchorIcon
+                        href="https://github.com/nextui-org/nextui"
+                        anchorIcon={<AnchorIcon />}
+                      >
+                        William Howard
+                      </Link>
+                    </TableCell>
+                    <TableCell className="hidden lg:block">Web3 Developer</TableCell>
+                    <TableCell><Chip size="sm" color="success" variant="light">Active</Chip></TableCell>
+                  </TableRow>
+                  <TableRow key="4">
+                    <TableCell>
+                      <Link
+                        size="sm"
+                        color="foreground"
+                        isExternal
+                        showAnchorIcon
+                        href="https://github.com/nextui-org/nextui"
+                        anchorIcon={<AnchorIcon />}
+                      >
+                        William Howard
+                      </Link>
+                    </TableCell>
+                    <TableCell className="hidden lg:block">Community Manager</TableCell>
+                    <TableCell><Chip color="warning" variant="light">Vacation</Chip></TableCell>
+                  </TableRow>
+                  
+                  
+                </TableBody>
+              </Table>
+            </div>
+          </CardBody>
+          {/* <CardFooter className="absolute bg-green-500/10 bottom-0 z-10 border-t-1 border-green-600 dark:border-green-300">
+            <div className="flex flex-grow gap-2 items-center">
+              <AvatarGroup isBordered max={3} size="sm">
+                <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+                <Avatar src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
+                <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
+                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
+                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026702d" />
+                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
+              </AvatarGroup>
+            </div>
+            <Button
+              href=""
+              as={Link}
+              color="default"
+              radius="full"
+              size="md"
+              variant="bordered"
+              showAnchorIcon
+            >
+              Project Details
+            </Button>
+          </CardFooter> */}
+        </Card>
+
+        {/* card 3 */}
+        {/* <Card className="col-span-12 sm:col-span-6 h-[400px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <Image
@@ -222,7 +352,6 @@ export const infotainment = () => {
             <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
-                  
                   <div className="w-auto p-1.5">
                     <h5 className="text-md ">Images</h5>
                     <span className="text-tiny ">344 images</span>
@@ -230,26 +359,67 @@ export const infotainment = () => {
                 </div>
               </div>
               <div className="w-auto p-2">
-              <div className="w-auto p-2">
-            <div className="flex items-center p-2 bg-green-700 rounded-md">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M9.66675 1V3.66667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M4.3335 1V3.66667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M1.66675 6.33337H12.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M6.3335 9H7.00016" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7 9V11" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span className="ml-2 text-small">Jul 05</span>
-            </div>
-          </div>
+                <div className="w-auto p-2">
+                  <div className="flex items-center p-2 bg-green-500 rounded-md">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M9.66675 1V3.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4.3335 1V3.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M1.66675 6.33337H12.3334"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M6.3335 9H7.00016"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 9V11"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <span className="ml-2 text-small">Jul 05</span>
+                  </div>
+                </div>
               </div>
             </div>
             <Divider />
             <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
-                  
                   <div className="w-auto p-1.5">
                     <h5 className="text-md ">Images</h5>
                     <span className="text-tiny ">344 images</span>
@@ -257,26 +427,67 @@ export const infotainment = () => {
                 </div>
               </div>
               <div className="w-auto p-2">
-              <div className="w-auto p-2">
-            <div className="flex items-center p-2 bg-green-700 rounded-md">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M9.66675 1V3.66667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M4.3335 1V3.66667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M1.66675 6.33337H12.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M6.3335 9H7.00016" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7 9V11" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span className="ml-2 text-small">Jul 05</span>
-            </div>
-          </div>
+                <div className="w-auto p-2">
+                  <div className="flex items-center p-2 bg-green-500 rounded-md">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M9.66675 1V3.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4.3335 1V3.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M1.66675 6.33337H12.3334"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M6.3335 9H7.00016"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 9V11"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <span className="ml-2 text-small">Jul 05</span>
+                  </div>
+                </div>
               </div>
             </div>
             <Divider />
             <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
-                  
                   <div className="w-auto p-1.5">
                     <h5 className="text-md ">Images</h5>
                     <span className="text-tiny ">344 images</span>
@@ -284,24 +495,65 @@ export const infotainment = () => {
                 </div>
               </div>
               <div className="w-auto p-2">
-              <div className="w-auto p-2">
-            <div className="flex items-center p-2 bg-green-700 rounded-md">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M9.66675 1V3.66667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M4.3335 1V3.66667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M1.66675 6.33337H12.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M6.3335 9H7.00016" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M7 9V11" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span className="ml-2 text-small">Jul 05</span>
-            </div>
-          </div>
+                <div className="w-auto p-2">
+                  <div className="flex items-center p-2 bg-green-500 rounded-md">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M9.66675 1V3.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4.3335 1V3.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M1.66675 6.33337H12.3334"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M6.3335 9H7.00016"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 9V11"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <span className="ml-2 text-small">Jul 05</span>
+                  </div>
+                </div>
               </div>
             </div>
-            
           </CardBody>
-          <CardFooter className="absolute bg-black/20 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+          <CardFooter className="absolute bg-green-500/10 bottom-0 z-10 border-t-1 border-green-600 dark:border-green-300">
             <div className="flex flex-grow gap-2 items-center">
               <AvatarGroup isBordered max={3} size="sm">
                 <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
@@ -313,16 +565,19 @@ export const infotainment = () => {
               </AvatarGroup>
             </div>
             <Button
-              className="text-tiny"
-              color="success"
+              href=""
+              as={Link}
+              color="default"
               radius="full"
-              size="sm"
+              size="md"
+              variant="bordered"
+              showAnchorIcon
             >
               Project Details
             </Button>
           </CardFooter>
-        </Card>
-        {/* card 3 */}
+        </Card> */}
+        {/* card 4 */}
         <Card className="col-span-12 sm:col-span-6 h-[400px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
@@ -351,22 +606,21 @@ export const infotainment = () => {
           </CardHeader>
           <Divider />
           <CardBody>
-          <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
+            <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
-                  
                   <div className="w-auto p-1.5 border-l border-purple-500 ">
-                  <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
+                    <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
                     <p className="text-tiny ml-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-                      
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                      <br />
                     </p>
                   </div>
                 </div>
               </div>
               <div className="w-auto p-2">
-              <div className="w-auto p-2">
-              <div className="w-full md:w-auto p-2">
+                <div className="w-auto p-2">
+                  <div className="w-full md:w-auto p-2">
                     <button className="flex flex-wrap justify-center items-center w-6 h-6 hover:bg-purple-500 font-medium text-sm text-gray-500 border border-gray-500 hover:border-purple-300 rounded-md shadow-button">
                       <svg
                         width="12"
@@ -382,26 +636,25 @@ export const infotainment = () => {
                       </svg>
                     </button>
                   </div>
-          </div>
+                </div>
               </div>
             </div>
             <Divider />
             <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
-                  
                   <div className="w-auto p-1.5 border-l border-purple-500 ">
-                  <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
+                    <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
                     <p className="text-tiny ml-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-                      
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                      <br />
                     </p>
                   </div>
                 </div>
               </div>
               <div className="w-auto p-2">
-              <div className="w-auto p-2">
-              <div className="w-full md:w-auto p-2">
+                <div className="w-auto p-2">
+                  <div className="w-full md:w-auto p-2">
                     <button className="flex flex-wrap justify-center items-center w-6 h-6 hover:bg-purple-500 font-medium text-sm text-gray-500 border border-gray-500 hover:border-purple-300 rounded-md shadow-button">
                       <svg
                         width="12"
@@ -417,26 +670,25 @@ export const infotainment = () => {
                       </svg>
                     </button>
                   </div>
-          </div>
+                </div>
               </div>
             </div>
             <Divider />
             <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
-                  
                   <div className="w-auto p-1.5 border-l border-purple-500 ">
-                  <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
+                    <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
                     <p className="text-tiny ml-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-                      
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                      <br />
                     </p>
                   </div>
                 </div>
               </div>
               <div className="w-auto p-2">
-              <div className="w-auto p-2">
-              <div className="w-full md:w-auto p-2">
+                <div className="w-auto p-2">
+                  <div className="w-full md:w-auto p-2">
                     <button className="flex flex-wrap justify-center items-center w-6 h-6 hover:bg-purple-500 font-medium text-sm text-gray-500 border border-gray-500 hover:border-purple-300 rounded-md shadow-button">
                       <svg
                         width="12"
@@ -452,11 +704,11 @@ export const infotainment = () => {
                       </svg>
                     </button>
                   </div>
-          </div>
+                </div>
               </div>
             </div>
           </CardBody>
-          <CardFooter className="absolute bg-black/20 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+          <CardFooter className="absolute bg-purple-500/10 bottom-0 z-10 border-t-1 border-purple-600 dark:border-purple-300">
             <div className="flex flex-grow gap-2 items-center">
               <AvatarGroup isBordered max={3} size="sm">
                 <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
@@ -467,12 +719,20 @@ export const infotainment = () => {
                 <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
               </AvatarGroup>
             </div>
-            <Button radius="full" size="sm" color="secondary">
+            <Button
+              href=""
+              as={Link}
+              radius="full"
+              size="md"
+              color="default"
+              variant="bordered"
+              showAnchorIcon
+            >
               Check more Services
             </Button>
           </CardFooter>
         </Card>
-        {/* card 4 */}
+        {/* card 5 */}
         <Card className="col-span-12 sm:col-span-6 h-[400px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
@@ -509,16 +769,16 @@ export const infotainment = () => {
             <p className="text-tiny ">Available soon.</p>
             <Button
               className="text-tiny  bg-pink-500"
-              variant="flat"
+              variant="bordered"
               color="default"
-              radius="lg"
-              size="sm"
+              radius="full"
+              size="md"
             >
               Notify me
             </Button>
           </CardFooter>
         </Card>
-        {/* card 5 */}
+        {/* card 6 */}
         <Card className="col-span-12  sm:col-span-12 h-[300px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
@@ -546,97 +806,9 @@ export const infotainment = () => {
             </div>
           </CardHeader>
           <Divider />
-          {/* <CardBody>
-            <p className="mt-4">
-              Get notified when I publish something new, and unsubscribe at any
-              time.
-            </p>
-            <Input
-              autoFocus
-              label="Email"
-              placeholder="Enter your email"
-              variant="bordered"
-              className="mt-8"
-            />
-            <p className="mt-4"></p>
-          </CardBody>
-
-          <CardFooter className="absolute  bottom-0 z-10 ">
-            <div className="flex flex-grow gap-2 items-center"></div>
-            <Button radius="full" color="primary">
-              Submit
-            </Button>
-          </CardFooter> */}
-          <CardBody>
-          
-          <div className="flex flex-col gap-4">
-      
-      <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4">
-        <Input
-          label="Email"
-          placeholder="nextui"
-          labelPlacement="outside"
-          
-          endContent={
-            <div className="pointer-events-none flex items-center">
-              <span className="text-default-400 text-small">@gmail.com</span>
-            </div>
-          }
-        />
-        <Input
-          label="Price"
-          placeholder="0.00"
-          labelPlacement="outside"
-          startContent={
-            <div className="pointer-events-none flex items-center">
-              <span className="text-default-400 text-small">$</span>
-            </div>
-          }
-          endContent={
-            <div className="flex items-center">
-              <label className="sr-only" htmlFor="currency">
-                Currency
-              </label>
-              <select
-                className="outline-none border-0 bg-transparent text-default-400 text-small"
-                id="currency"
-                name="currency"
-              >
-                <option>USD</option>
-                <option>ARS</option>
-                <option>EUR</option>
-              </select>
-            </div>
-          }
-          type="number"
-        />
-        <Input
-          type="url"
-          label="Website"
-          placeholder="nextui"
-          labelPlacement="outside"
-          startContent={
-            <div className="pointer-events-none flex items-center">
-              <span className="text-default-400 text-small">https://</span>
-            </div>
-          }
-          endContent={
-            <div className="pointer-events-none flex items-center">
-              <span className="text-default-400 text-small">.org</span>
-            </div>
-          }
-        />
-      </div>
-    </div>  
-    <Button  className="absolute  bottom-r-0 z-10 " color="primary" variant="shadow">
-        Submit
-      </Button>
-             
-      
-          </CardBody>
+          <CardBody></CardBody>
         </Card>
       </div>
-
       {/* infotainment cards-end */}
     </>
   );

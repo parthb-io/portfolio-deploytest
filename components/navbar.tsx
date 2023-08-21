@@ -30,7 +30,7 @@ import {
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
-// import { hire as Hire } from "./hire-modal";
+
 import {
   Dropdown,
   DropdownTrigger,
@@ -111,11 +111,14 @@ export const Navbar = () => {
               <Button variant="flat">Ecosystem</Button>
             </DropdownTrigger>
             <DropdownMenu variant="faded" aria-label="Static Actions" >
-			<DropdownItem key="gosavis" >GoSavis</DropdownItem>
+			<DropdownItem key="gosavis"  ><Link isExternal href={siteConfig.links.gosavis} aria-label="Gosavis">GoSavis</Link></DropdownItem>
+      {/* <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
+            <DiscordIcon className="text-default-500" />
+          </Link> */}
               <DropdownItem key="web">Web Development</DropdownItem>
-			  <DropdownItem key="ai" isDisabled>AI & LLM's</DropdownItem>
+			  <DropdownItem key="ai" isDisabled>AI &apos; LLM's</DropdownItem>
 			  <DropdownItem key="cyber" isDisabled>CyberSecurity</DropdownItem>
-			  <DropdownItem key="web3" isDisabled>Web 3 & Crytpography</DropdownItem>
+			  <DropdownItem key="web3" isDisabled>Web 3 &apos; Crytpography</DropdownItem>
 			  <DropdownItem key="podcasts" isDisabled>Podcasts</DropdownItem>
               <DropdownItem key="certificates" className="text-secondary" isDisabled >
                 Certifications Achieved
@@ -123,20 +126,9 @@ export const Navbar = () => {
             </DropdownMenu>
           </Dropdown>
         </NavbarItem>
-        {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
+       
         <NavbarItem className="hidden md:flex">
-          {/* <Button
-            isExternal
-						as={Link}
-						className="text-sm font-normal text-default-600 bg-default-100"
-						href={siteConfig.links.sponsor}
-						startContent={<HeartFilledIcon className="text-green-500" />}
-						variant="flat"
-					>
-						Hire Me
-					</Button> */}
-          {/* <Hire /> */}
-          {/* Hire dropdown */}
+          
           
 		  <Dropdown
       showArrow
@@ -193,16 +185,14 @@ export const Navbar = () => {
           <DropdownItem key="settings">Hire On Fiverr</DropdownItem>
           <DropdownItem
             key="new_project"
-            // endContent={<PlusIcon className="text-large" />}
+            
           >
             Hire On Upwork
           </DropdownItem>
         </DropdownSection>
 
         <DropdownSection aria-label="Preferences" showDivider>
-          {/* <DropdownItem key="quick_search" shortcut="⌘K" isDisabled>
-            New Project Quote
-          </DropdownItem> */}
+          
           <DropdownItem isDisabled
             isReadOnly
             key="New Project"
@@ -258,7 +248,7 @@ export const Navbar = () => {
             </DropdownMenu>
           </Dropdown>
         </NavbarItem>
-        {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
+        
         <NavbarItem className="flex">
           <Dropdown backdrop="blur">
             <DropdownTrigger>
@@ -280,7 +270,7 @@ export const Navbar = () => {
           </Dropdown>
         </NavbarItem>
 
-        {/* {searchInput} */}
+        
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
