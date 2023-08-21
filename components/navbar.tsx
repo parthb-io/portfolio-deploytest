@@ -105,7 +105,7 @@ export const Navbar = () => {
           </Link>
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem className="hidden md:flex">
+        <NavbarItem className=" md:flex">
           <Dropdown backdrop="blur">
             <DropdownTrigger>
               <Button variant="flat">Ecosystem</Button>
@@ -127,7 +127,7 @@ export const Navbar = () => {
           </Dropdown>
         </NavbarItem>
        
-        <NavbarItem className="hidden md:flex">
+        <NavbarItem className=" md:flex">
           
           
 		  <Dropdown
@@ -233,42 +233,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu>
-        <NavbarItem className=" flex">
-          <Dropdown backdrop="blur">
-            <DropdownTrigger>
-              <Button variant="flat">Ecosystem</Button>
-            </DropdownTrigger>
-            <DropdownMenu variant="faded" aria-label="Static Actions">
-              <DropdownItem key="new">New file</DropdownItem>
-              <DropdownItem key="copy">Copy link</DropdownItem>
-              <DropdownItem key="edit">Edit file</DropdownItem>
-              <DropdownItem key="delete" className="text-danger" color="danger">
-                Delete file
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </NavbarItem>
         
-        <NavbarItem className="flex">
-          <Dropdown backdrop="blur">
-            <DropdownTrigger>
-              <Button
-                startContent={<HeartFilledIcon className="text-green-500" />}
-                variant="flat"
-              >
-                Open Menu
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu variant="faded" aria-label="Static Actions">
-              <DropdownItem key="new">New file</DropdownItem>
-              <DropdownItem key="copy">Copy link</DropdownItem>
-              <DropdownItem key="edit">Edit file</DropdownItem>
-              <DropdownItem key="delete" className="text-danger" color="danger">
-                Delete file
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </NavbarItem>
 
         
         <div className="mx-4 mt-2 flex flex-col gap-2">
@@ -282,7 +247,7 @@ export const Navbar = () => {
                     ? "danger"
                     : "foreground"
                 }
-                href="#"
+                href={item.href}
                 size="lg"
               >
                 {item.label}

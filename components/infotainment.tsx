@@ -24,11 +24,12 @@ export const infotainment = () => {
   return (
     <>
       {/* infotainment cards */}
-      <div className="relative gap-8 grid grid-cols-12 grid-rows-2 px-8">
+      <section className="container flex flex-col relative  py-4">
+      <div className="container mx-auto w-full gap-4 md:gap-8  grid grid-cols-12 grid-rows-2  pb-10  " >
         {/* card 1 */}
         <Card
           isFooterBlurred
-          className="relative w-full h-[400px] col-span-12 sm:col-span-12"
+          className="relative w-full h-[450px] md:h-[500px] col-span-12 sm:col-span-12"
         >
           <Image
             removeWrapper
@@ -45,7 +46,7 @@ export const infotainment = () => {
           </CardFooter>
         </Card>
         {/* Card 2 */}
-        <Card className="relative col-span-12 sm:col-span-6 h-[400px]">
+        <Card className="relative col-span-12 sm:col-span-6 h-[450px] md:h-[500px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <Image
@@ -86,7 +87,7 @@ export const infotainment = () => {
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
                   <dt className="sr-only ">Company</dt>
-                  <dd className="w-full flex-none text-md ">
+                  <dd className="w-full flex-none text-sm md:text-md ">
                     Full-stack Developer / Project Manager
                   </dd>
                   <dt className="sr-only hidden sm:block">Role</dt>
@@ -117,7 +118,7 @@ export const infotainment = () => {
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
                   <dt className="sr-only">Company</dt>
-                  <dd className="w-full text-md flex-none ">
+                  <dd className="w-full text-sm md:text-md flex-none ">
                     Web Developer / Project Co-ordinator
                   </dd>
                   <dt className="sr-only hidden sm:block">Role</dt>
@@ -148,7 +149,7 @@ export const infotainment = () => {
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
                   <dt className="sr-only">Company</dt>
-                  <dd className="w-full flex-none text-md ">
+                  <dd className="w-full flex-none text-sm md:text-md ">
                     Computer Programmer / Diploma Program
                   </dd>
                   <dt className="sr-only hidden sm:block">Role</dt>
@@ -169,7 +170,7 @@ export const infotainment = () => {
             </ol>
           </CardBody>
 
-          <CardFooter className="absolute mb-2  bottom-0 z-10 ">
+          <CardFooter className="absolute mb-2 mt-6 pt-6 bottom-0 z-10 ">
             <Button
               href="https://docs.google.com/document/d/1L8xBEcyQcA0kBVaIT4wzzeqeyO9zXk7WeTDBUyzFytE/edit?usp=sharing"
               as={Link}
@@ -182,7 +183,7 @@ export const infotainment = () => {
           </CardFooter>
         </Card>
 
-        <Card className="col-span-12 sm:col-span-6 h-[400px]">
+        <Card className="col-span-12 sm:col-span-6 h-[450px] md:h-[500px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <Image
@@ -227,7 +228,8 @@ export const infotainment = () => {
                   <TableRow key="1">
                     <TableCell>
                       <Link
-                        size="sm"
+                      className="text-tiny md:text-sm"
+                       
                         color="foreground"
                         isExternal
                         showAnchorIcon
@@ -294,291 +296,9 @@ export const infotainment = () => {
               </Table>
             </div>
           </CardBody>
-          {/* <CardFooter className="absolute bg-green-500/10 bottom-0 z-10 border-t-1 border-green-600 dark:border-green-300">
-            <div className="flex flex-grow gap-2 items-center">
-              <AvatarGroup isBordered max={3} size="sm">
-                <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026702d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
-              </AvatarGroup>
-            </div>
-            <Button
-              href=""
-              as={Link}
-              color="default"
-              radius="full"
-              size="md"
-              variant="bordered"
-              showAnchorIcon
-            >
-              Project Details
-            </Button>
-          </CardFooter> */}
-        </Card>
-
-        {/* card 3 */}
-        {/* <Card className="col-span-12 sm:col-span-6 h-[400px]">
-          <CardHeader className="justify-between">
-            <div className="flex gap-5">
-              <Image
-                alt="nextui logo"
-                height={40}
-                radius="sm"
-                src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                width={40}
-              />
-              <div className="flex flex-col">
-                <p className="text-md">Bantsy-AI</p>
-                <p className="text-small text-emerald-500 text-default-500">
-                  Ongoing Project
-                </p>
-              </div>
-            </div>
-            <div className="mb-2 flex items-center justify-end">
-              <a className="mr-2 rounded-full bg-emerald-200 p-1" href="#">
-                <div className="h-2 w-2 rounded-full bg-emerald-600"></div>
-              </a>
-              <a className="mr-3 h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-              <a className="mr-3 h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-              <a className="h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-            </div>
-          </CardHeader>
-          <Divider />
-
-          <CardBody>
-            <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
-              <div className="w-auto p-2">
-                <div className="flex flex-wrap items-center -m-1.5">
-                  <div className="w-auto p-1.5">
-                    <h5 className="text-md ">Images</h5>
-                    <span className="text-tiny ">344 images</span>
-                  </div>
-                </div>
-              </div>
-              <div className="w-auto p-2">
-                <div className="w-auto p-2">
-                  <div className="flex items-center p-2 bg-green-500 rounded-md">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M9.66675 1V3.66667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M4.3335 1V3.66667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M1.66675 6.33337H12.3334"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M6.3335 9H7.00016"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M7 9V11"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                    <span className="ml-2 text-small">Jul 05</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Divider />
-            <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
-              <div className="w-auto p-2">
-                <div className="flex flex-wrap items-center -m-1.5">
-                  <div className="w-auto p-1.5">
-                    <h5 className="text-md ">Images</h5>
-                    <span className="text-tiny ">344 images</span>
-                  </div>
-                </div>
-              </div>
-              <div className="w-auto p-2">
-                <div className="w-auto p-2">
-                  <div className="flex items-center p-2 bg-green-500 rounded-md">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M9.66675 1V3.66667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M4.3335 1V3.66667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M1.66675 6.33337H12.3334"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M6.3335 9H7.00016"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M7 9V11"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                    <span className="ml-2 text-small">Jul 05</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Divider />
-            <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
-              <div className="w-auto p-2">
-                <div className="flex flex-wrap items-center -m-1.5">
-                  <div className="w-auto p-1.5">
-                    <h5 className="text-md ">Images</h5>
-                    <span className="text-tiny ">344 images</span>
-                  </div>
-                </div>
-              </div>
-              <div className="w-auto p-2">
-                <div className="w-auto p-2">
-                  <div className="flex items-center p-2 bg-green-500 rounded-md">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.0001 2.33337H3.00008C2.2637 2.33337 1.66675 2.93033 1.66675 3.66671V11.6667C1.66675 12.4031 2.2637 13 3.00008 13H11.0001C11.7365 13 12.3334 12.4031 12.3334 11.6667V3.66671C12.3334 2.93033 11.7365 2.33337 11.0001 2.33337Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M9.66675 1V3.66667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M4.3335 1V3.66667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M1.66675 6.33337H12.3334"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M6.3335 9H7.00016"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M7 9V11"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                    <span className="ml-2 text-small">Jul 05</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardBody>
-          <CardFooter className="absolute bg-green-500/10 bottom-0 z-10 border-t-1 border-green-600 dark:border-green-300">
-            <div className="flex flex-grow gap-2 items-center">
-              <AvatarGroup isBordered max={3} size="sm">
-                <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026702d" />
-                <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026708c" />
-              </AvatarGroup>
-            </div>
-            <Button
-              href=""
-              as={Link}
-              color="default"
-              radius="full"
-              size="md"
-              variant="bordered"
-              showAnchorIcon
-            >
-              Project Details
-            </Button>
-          </CardFooter>
-        </Card> */}
+          </Card>
         {/* card 4 */}
-        <Card className="col-span-12 sm:col-span-6 h-[400px]">
+        <Card className="col-span-12 sm:col-span-6 h-[450px] md:h-[500px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <Image
@@ -610,7 +330,7 @@ export const infotainment = () => {
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
                   <div className="w-auto p-1.5 border-l border-purple-500 ">
-                    <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
+                    <h3 className="mb-1 text-sm md:text-md ml-2">Instant sales support</h3>
                     <p className="text-tiny ml-2">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                       <br />
@@ -644,7 +364,7 @@ export const infotainment = () => {
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
                   <div className="w-auto p-1.5 border-l border-purple-500 ">
-                    <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
+                    <h3 className="mb-1 text-sm md:text-md ml-2">Instant sales support</h3>
                     <p className="text-tiny ml-2">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                       <br />
@@ -673,12 +393,12 @@ export const infotainment = () => {
                 </div>
               </div>
             </div>
-            <Divider />
-            <div className="flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
+            <Divider className="hidden md:flex flex-wrap" />
+            <div className="hidden md:flex flex-wrap py-1 px-4 items-center justify-between  rounded-md">
               <div className="w-auto p-2">
                 <div className="flex flex-wrap items-center -m-1.5">
                   <div className="w-auto p-1.5 border-l border-purple-500 ">
-                    <h3 className="mb-1 text-md ml-2">Instant sales support</h3>
+                    <h3 className="mb-1 text-sm md:text-md ml-2">Instant sales support</h3>
                     <p className="text-tiny ml-2">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                       <br />
@@ -733,7 +453,7 @@ export const infotainment = () => {
           </CardFooter>
         </Card>
         {/* card 5 */}
-        <Card className="col-span-12 sm:col-span-6 h-[400px]">
+        <Card className="col-span-12 sm:col-span-6 h-[450px] md: h-[500px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <Image
@@ -742,6 +462,7 @@ export const infotainment = () => {
                 radius="sm"
                 src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
                 width={40}
+                
               />
               <div className="flex flex-col">
                 <p className="text-md">Kalaakar</p>
@@ -762,7 +483,7 @@ export const infotainment = () => {
 
           <Image
             alt="Woman listing to music"
-            className="object-cover w-full"
+            className="object-cover h-[400px] md: h-[500px] w-full"
             src="https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw5Mnx8cXVvdGVzfGVufDB8fHx8MTY5MjQwMTY5MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
           />
           <CardFooter className="justify-between before:bg-white/10 border-black/30 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
@@ -779,7 +500,7 @@ export const infotainment = () => {
           </CardFooter>
         </Card>
         {/* card 6 */}
-        <Card className="col-span-12  sm:col-span-12 h-[300px]">
+        <Card className="col-span-12  sm:col-span-12 h-[450px] md:h-[400px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <Image
@@ -809,6 +530,8 @@ export const infotainment = () => {
           <CardBody></CardBody>
         </Card>
       </div>
+      </section>
+      
       {/* infotainment cards-end */}
     </>
   );

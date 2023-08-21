@@ -1,7 +1,7 @@
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
-
+import {Tooltip, Button} from "@nextui-org/react";
 export const tech = () => {
   return (
     <>
@@ -50,22 +50,27 @@ export const tech = () => {
               <CardBody className="gap-4" >
                 <div className="">
                   <div className="mr-6  inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
+                  <Tooltip color="primary" showArrow={true} closeDelay={2000} content="Mongo.db">
                     <Image
-                      alt="nodejs logo"
-                      height={32}
-                      radius="sm"
-                      src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                      width={32}
-                    />
-                  </div>
-                  <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
-                  <Image
                       alt="mongodb logo"
                       height={32}
                       radius="sm"
-                      src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                      src="https://i.ibb.co/4th7GGv/mongodb-logo.png"
                       width={32}
                     />
+                  </Tooltip>
+                    
+                  </div>
+                  <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
+                  <Tooltip color="primary" showArrow={true} closeDelay={2000} content="Wordpress">
+                  <Image
+                      alt="worpdress logo"
+                      height={32}
+                      radius="sm"
+                      src="https://i.ibb.co/JxhqNM8/wordpress-logo-1.png"
+                      width={32}
+                    />
+                  </Tooltip>
                   </div>
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image

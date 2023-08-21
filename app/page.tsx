@@ -4,6 +4,7 @@
 import { Avatar} from "@nextui-org/avatar";
 
 import { title} from "@/components/primitives";
+import {Link} from "@nextui-org/react";
 
 
 // import { TechStack } from "@/components/intro-tabs";
@@ -14,8 +15,8 @@ import { infotainment as Infotainment } from "@/components/infotainment";
 export default function Home() {
   return (
 	<>
-	<section className="flex flex-col items-center justify-center gap-4 py-4 ">
-      <div className="container mx-auto w-full  p-8 pb-10 lg:max-w-screen-xl">
+	<section className="container flex flex-col items-center justify-center gap-4 py-4 ">
+      <div className="container mx-auto w-full  p-2 pb-10 ">
         <div className="mb-8 border-b border-gray-600  pb-12 font-mono">
           <div className="flex items-center">
 		  <Avatar
@@ -26,10 +27,7 @@ export default function Home() {
 					  size="lg"
                     />
           </div>
-          {/* <h1 className={title({ class: "mb-4 " })}>
-            👋 Hello! I'm [Parth B.]{" "}
-          </h1>
-          <br /> */}
+          
           <br />
           <h1 className={title({ class: "mt-2  text-emerald-500" })}>
             [A FullStack developer]{""}{" "}
@@ -39,7 +37,7 @@ export default function Home() {
           </h1>
 
           <p
-            className="font-medium mt-8 leading-normal " 
+            className="text-sm mt-8 leading-normal " 
           >
             🚀 From front-end magic with{" "}
             <a href="" className="underline">
@@ -75,73 +73,28 @@ export default function Home() {
           </p> */}
 
           <div className="mb-4 mt-8 flex flex-wrap gap-3">
-            <a
-              className="group  -m-1 p-1"
-              aria-label="Follow on GitHub"
-              href="https://github.com"
-            >
-              #FullStackDeveloper
-            </a>
-            <a
-              className="group -m-1 p-1"
-              aria-label="Follow on Twitter"
-              href="https://twitter.com"
-            >
-              #FullStackDeveloper
-            </a>
-            <a
-              className="group -m-1 p-1"
-              aria-label="Follow on Twitter"
-              href="https://twitter.com"
-            >
-              #FullStackDeveloper
-            </a>
+          <Link size="sm" href="#" color="success">#FullStackDeveloper</Link>
+          <Link size="sm" href="#" color="success">#WebDeveloper</Link>
+          <Link size="sm" href="#" color="success">#FreelanceDeveloper</Link>
+           
           </div>
           <Tech />
           {/* <TechStack /> */}
         </div>
+        <Infotainment />
       </div>
 
 	 
+      
 
 
 
 
 
-
-      {/* <div className="flex gap-3">
-        <Link
-          isExternal
-          as={NextLink}
-          href={siteConfig.links.docs}
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          as={NextLink}
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideSymbol hideCopyButton variant="flat">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
-      </div> */}
+      
     </section>
-	 <Infotainment /></>
+	 
+   </>
     
   );
 }

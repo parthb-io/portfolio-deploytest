@@ -44,11 +44,7 @@ export const siteConfig = {
 			label: "Articles",
 			href: "/blog",
 		  },
-		//   {
-		// 	label: "Whitepaper",
-		// 	href: "/about",
-			
-		//   }
+		
 	],
 	// navMenuItems: [
 	// 	{
