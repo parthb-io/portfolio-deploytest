@@ -86,6 +86,7 @@ export const siteConfig = {
 		docs: "https://nextui.org",
 		discord: "https://discord.gg/9b6yyZKmH4",
     sponsor: "",
+	fiverr:"https://www.fiverr.com/parthb_io",
 	gosavis:"https://gosavis.com"
 	},
 };

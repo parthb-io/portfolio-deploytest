@@ -182,13 +182,24 @@ export const Navbar = () => {
           <DropdownItem key="dashboard" isDisabled>
             Dashboard
           </DropdownItem>
-          <DropdownItem key="settings">Hire On Fiverr</DropdownItem>
-          <DropdownItem
-            key="new_project"
-            
-          >
-            Hire On Upwork
-          </DropdownItem>
+          <DropdownItem key="fiverr"> <Link
+        isExternal
+        href="https://www.fiverr.com/parthb_io"
+        showAnchorIcon
+        color="foreground"
+        size="sm"
+      >
+        Hire On Fiverr
+      </Link></DropdownItem>
+      <DropdownItem key="upwork" isDisabled> <Link
+        isExternal
+        href="https://www.fiverr.com/parthb_io"
+        showAnchorIcon
+        color="foreground"
+        size="sm"
+      >
+        Hire On UpWork
+      </Link></DropdownItem>
         </DropdownSection>
 
         <DropdownSection aria-label="Preferences" showDivider>
@@ -233,7 +244,15 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu>
+      <Link
+        isExternal
+        href="https://www.fiverr.com/parthb_io"
+        showAnchorIcon
+        color="success"
         
+      >
+        Hire On Fiverr
+      </Link>
 
         
         <div className="mx-4 mt-2 flex flex-col gap-2">

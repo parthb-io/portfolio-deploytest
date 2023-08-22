@@ -534,62 +534,7 @@ export const infotainment = () => {
             </CardFooter>
           </Card>
           {/* card 6 */}
-          {/* <Card className="col-span-12  sm:col-span-12 h-[400px] md:h-[400px]">
-            <CardHeader className="justify-between">
-              <div className="flex gap-5">
-                <Image
-                  alt="nextui logo"
-                  height={40}
-                  radius="sm"
-                  src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                  width={40}
-                />
-                <div className="flex flex-col">
-                  <p className="text-md">Chat with Me</p>
-                  <p className="text-small text-blue-500 text-default-500">
-                    Weekly Newsletters
-                  </p>
-                </div>
-              </div>
-              <div className="mb-2 flex items-center justify-end">
-                <a className="mr-2 rounded-full bg-blue-200 p-1" href="#">
-                  <div className="h-2 w-2 rounded-full bg-blue-600"></div>
-                </a>
-                <a
-                  className="mr-3 h-1 w-1 rounded-full bg-gray-200"
-                  href="#"
-                ></a>
-                <a
-                  className="mr-3 h-1 w-1 rounded-full bg-gray-200"
-                  href="#"
-                ></a>
-                <a className="h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-              </div>
-            </CardHeader>
-            <Divider />
-            <CardBody>
-            <div className="container mx-auto px-4">
-    <h2 className="mb-8 font-heading font-semibold text-center lg:text-4xl text-xl">Unlock your startup&rsquo;s true potential</h2>
-    <div className="flex flex-wrap -m-6 xl:-m-16">
-      <div className="w-full md:w-1/3 p-6 xl:p-16">
-        <div className="mb-6 h-1.5 w-12 rounded-full"></div>
-        <h2 className="mb-3 font-heading font-bold text-2xl sm:text-xl ">67%</h2>
-        <p className="lg:text-base text-xs">Amet minim mollit non deserunt ullamco est sit aliqua dolor</p>
-      </div>
-      <div className="w-full md:w-1/3 p-6 xl:p-16">
-        <div className="mb-6 h-1.5 w-12 bg-gradient-green rounded-full"></div>
-        <h2 className="mb-3 font-heading font-bold text-2xl sm:text-xl ">115%</h2>
-        <p className="lg:text-base text-xs">Amet minim mollit non deserunt ullamco est sit aliqua dolor</p>
-      </div>
-      <div className="w-full md:w-1/3 p-6 xl:p-16">
-        <div className="mb-6 h-1.5 w-12 bg-gradient-green rounded-full"></div>
-        <h2 className="mb-3 font-heading font-bold text-2xl sm:text-xl ">157%</h2>
-        <p className=" lg:text-base text-xs">Amet minim mollit non deserunt ullamco est sit aliqua dolor</p>
-      </div>
-    </div>
-  </div>
-            </CardBody>
-          </Card> */}
+         
         </div>
       </section>
 
