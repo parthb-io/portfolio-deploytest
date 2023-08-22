@@ -1,12 +1,13 @@
 import React from "react";
 export const AnchorIcon = (props: any) => (
   <svg
+  className=" "
     aria-hidden="true"
     focusable="false"
-    height="24"
+    height="20"
     role="presentation"
     viewBox="0 0 24 24"
-    width="24"
+    width="20"
     color="default"
     {...props}
   >
