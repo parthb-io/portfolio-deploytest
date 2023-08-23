@@ -23,10 +23,11 @@ export default function Home() {
       className="w-[100px] h-[100px]"
                       isBordered
                       radius="sm"
-                      src="https://images.unsplash.com/photo-1620945873198-659df09f8f04?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwyN3x8cGVhY2V8ZW58MHwxfHx8MTY5Mjc1NjY5M3ww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+                      src="profile3.jpeg"
                      
 					  
                     />
+                    {/* https://images.unsplash.com/photo-1620945873198-659df09f8f04?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwyN3x8cGVhY2V8ZW58MHwxfHx8MTY5Mjc1NjY5M3ww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920 */}
           </div>
           
           <br />
