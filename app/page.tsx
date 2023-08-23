@@ -74,10 +74,10 @@ export default function Home() {
           <p
             className="text-sm mt-1 leading-normal "
           >
-            🔧 When I'm not diving into code, you might find me debugging over a
+            🔧 When I&apos;m not diving into code, you might find me debugging over a
             glass of juice 🧃, exploring new tech trends 🌐, or contributing to
-            [open-source projects] to give back to the developer community. I'm
-            all about continuous learning and pushing the boundaries of what's
+            [open-source projects] to give back to the developer community. I&apos;m
+            all about continuous learning and pushing the boundaries of what&apos;s
             possible.
           </p>
 

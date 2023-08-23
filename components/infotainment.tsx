@@ -204,7 +204,7 @@ export const infotainment = () => {
                 <div className="flex flex-col">
                   <p className="text-md">Project List</p>
                   <p className="text-tiny md:text-small text-default-500">
-                    Saas | NextJs | MERN Stack | API's
+                    Saas | NextJs | MERN Stack | API&apos;s
                   </p>
                 </div>
               </div>
