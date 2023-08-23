@@ -20,6 +20,7 @@ export default function Home() {
         <div className="mb-8 border-b border-gray-600  pb-16 font-mono">
           <div className="flex mb-4 items-center">
 		  <Avatar
+      
       className="w-[100px] h-[100px]"
                       isBordered
                       radius="sm"
