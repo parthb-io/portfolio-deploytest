@@ -44,7 +44,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="relative container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="relative container mx-auto max-w-7xl pt-10 md:py-12 px-6 flex-grow">
               {children}
             </main>
 
@@ -54,20 +54,17 @@ export default function RootLayout({
             
   <div className="mx-auto container px-4 pb-16 pt-6 sm:px-6 lg:px-8 ">
     <div className="text-center">
-      <h2 className="text-xl  md:text-3xl">
-        Customise Your Product
+      <h2 className="text-2xl  md:text-3xl">
+        Want To Collaborate On A Project?
       </h2>
 
-      <p className="mx-auto text-sm md:text-md mt-4 container ">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum maiores
-        ipsum eos temporibus ea nihil.
-      </p>
+      
 
       <a
         href="#"
         className="mt-8 inline-block rounded-full border border-indigo-600 px-12 py-3 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
       >
-        Get Started
+        Subscribe
       </a>
     </div>
 

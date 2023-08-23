@@ -19,13 +19,14 @@ import { Chip } from "@nextui-org/react";
 import { Link } from "@nextui-org/react";
 import {Textarea} from "@nextui-org/react";
 
+
 import { AnchorIcon } from "./anchor-icon";
 
 export const infotainment = () => {
   return (
     <>
       {/* infotainment cards */}
-      <section className="container flex flex-col relative  py-4">
+      <section className="container flex flex-col pt-16 relative  py-4">
         <div className="container mx-auto w-full gap-4 md:gap-8  grid grid-cols-12 grid-rows-2  pb-10  ">
           {/* card 1 */}
           <Card
@@ -54,12 +55,12 @@ export const infotainment = () => {
                   alt="nextui logo"
                   height={40}
                   radius="sm"
-                  src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                  src="/profile-logo.svg"
                   width={40}
                 />
                 <div className="flex flex-col">
                   <p className="text-md">Quick Bio</p>
-                  <p className="text-small text-blue-500 text-default-500">
+                  <p className="text-small  text-default-500">
                     Work & Education Exp
                   </p>
                 </div>
@@ -86,10 +87,10 @@ export const infotainment = () => {
                   <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image
                       alt="nextui logo"
-                      height={24}
+                      height={30}
                       radius="sm"
-                      src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                      width={24}
+                      src="./vebcommerce-logo.png"
+                      width={30}
                     />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -117,10 +118,10 @@ export const infotainment = () => {
                   <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image
                       alt="nextui logo"
-                      height={24}
+                      height={30}
                       radius="sm"
-                      src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                      width={24}
+                      src="./lofcart-logo.png"
+                      width={30}
                     />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -148,10 +149,10 @@ export const infotainment = () => {
                   <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image
                       alt="nextui logo"
-                      height={24}
+                      height={30}
                       radius="sm"
-                      src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                      width={24}
+                      src="georgian-logo.png"
+                      width={30}
                     />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -197,13 +198,13 @@ export const infotainment = () => {
                   alt="nextui logo"
                   height={40}
                   radius="sm"
-                  src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                  src="./profile-logo.svg"
                   width={40}
                 />
                 <div className="flex flex-col">
                   <p className="text-md">Project List</p>
-                  <p className="text-tiny md:text-small text-emerald-500 text-default-500">
-                    Saas. NextJs. MERN
+                  <p className="text-tiny md:text-small text-default-500">
+                    Saas | NextJs | MERN Stack | API's
                   </p>
                 </div>
               </div>
@@ -248,7 +249,7 @@ export const infotainment = () => {
                           href="https://github.com/nextui-org/nextui"
                           anchorIcon={<AnchorIcon />}
                         >
-                          William Howard
+                          Bantsy AI
                         </Link>
                       </TableCell>
                       <TableCell className="hidden lg:block">
@@ -275,7 +276,7 @@ export const infotainment = () => {
                           href="https://github.com/nextui-org/nextui"
                           anchorIcon={<AnchorIcon />}
                         >
-                          William Howard
+                          Airbnb Clone
                         </Link>
                       </TableCell>
                       <TableCell className="hidden lg:block">
@@ -329,7 +330,7 @@ export const infotainment = () => {
                           href="https://github.com/nextui-org/nextui"
                           anchorIcon={<AnchorIcon />}
                         >
-                          William Howard
+                          Bantsy Store
                         </Link>
                       </TableCell>
                       <TableCell className="hidden lg:block">
@@ -384,13 +385,13 @@ export const infotainment = () => {
                   alt="nextui logo"
                   height={40}
                   radius="sm"
-                  src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                  src="./profile-logo.svg"
                   width={40}
                 />
                 <div className="flex flex-col">
                   <p className="text-md font-semibold">Freelance Services</p>
-                  <p className="text-tiny md:text-small text-purple-500 ">
-                    Fiverr. UpWork. GoSavis
+                  <p className="text-tiny text-default-500 md:text-small  ">
+                    Fiverr | UpWork | GoSavis
                   </p>
                 </div>
               </div>
@@ -489,12 +490,12 @@ export const infotainment = () => {
                   alt="nextui logo"
                   height={40}
                   radius="sm"
-                  src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                  src="./profile-logo.svg"
                   width={40}
                 />
                 <div className="flex flex-col">
                   <p className="text-md">Kalaakar</p>
-                  <p className="text-small text-pink-500 text-default-500">
+                  <p className="text-small  text-default-500">
                     Digital Guest Boook
                   </p>
                 </div>
