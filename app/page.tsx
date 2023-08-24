@@ -41,7 +41,7 @@ export default function Home() {
                     className="m-5 mt-6 mb-6"
                   />
 
-                  <h1 className="mt-6 font-semibold text-3xl md:text-4xl lg:text-5xl text-emerald-500">
+                  <h1 className="mt-6 font-bold text-3xl md:text-3xl lg:text-4xl text-emerald-500">
                     <Typewriter
                       options={{
                         strings: [
@@ -124,7 +124,7 @@ export default function Home() {
                       </Code>
                     </div>
 
-                    <p className="text-md font-mono mb-4 text-gray-400 leading-normal ">
+                    <p className="text-md font-mono mb-4 leading-normal ">
                       Parthb.io is a tech initiative that seeks out regions and
                       markets with robust underlying catalysts, and income
                       growth, better quality of life and a business-friendly
@@ -140,18 +140,18 @@ export default function Home() {
               <div className=" py-10 md:py-20">
                 <ul>
                   <li className="flex items-center px-3 justify-between mb-4 pb-2 ">
-                    <span className="text-lg">Work Experience</span>
+                    <span className="text-md font-semibold lg:text-lg">Work Experience</span>
                     <span className="text-sm lg:text-xl">
-                    <Chip color="secondary" variant="dot">4+ Years</Chip>
+                    <Chip color="success" variant="dot">4+ Years</Chip>
                      
                       
                     </span>
                   </li>
                   <Divider className="my-4" />
                   <li className="flex items-center px-3  justify-between mb-4 pb-2 ">
-                    <span className="text-lg">Projects Finished</span>
+                    <span className="text-md font-semibold lg:text-lg">Projects Finished</span>
                     <span className="text-sm  lg:text-xl">
-                    <Chip color="secondary" variant="dot">50+ </Chip>
+                    <Chip color="success" variant="dot">50+ </Chip>
                       
                     </span>
                   </li>
@@ -160,6 +160,7 @@ export default function Home() {
 
                   <Accordion variant="light">
                     <AccordionItem
+                    className="font-mono text-sm font-semibold lg:text-md"
                       key="1"
                       aria-label="techstack"
                       title="Daily Tech Stack"
@@ -170,6 +171,7 @@ export default function Home() {
                       key="2"
                       aria-label="career"
                       title="Career Preferrences"
+                      className="font-mono text-sm font-semibold lg:text-md"
                     >
                       <div className="mb-4  flex flex-wrap gap-3">
                         <Link size="sm" href="#" color="success" isDisabled>

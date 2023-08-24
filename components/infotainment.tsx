@@ -65,7 +65,7 @@ export const infotainment = () => {
                   width={40}
                 />
                 <div className="flex flex-col">
-                  <p className="text-md">Quick Bio</p>
+                  <p className="text-md">Resume / Bio</p>
                   <p className="text-small  text-default-500">
                     Work & Education Exp
                   </p>
@@ -136,7 +136,7 @@ export const infotainment = () => {
                       Web Developer 
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className=" text-tiny">
+                    <dd className="text-tiny">
                       Lofcart Alberta Ltd
                     </dd>
                     <dt className="sr-only">Date</dt>
@@ -164,10 +164,10 @@ export const infotainment = () => {
                   <dl className="flex flex-auto flex-wrap gap-x-2">
                     <dt className="sr-only">Company</dt>
                     <dd className="w-full flex-none text-sm md:text-md ">
-                      Computer Programmer / Diploma Program
+                      Computer Programmer / Diploma-Program
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className=" text-tiny">
+                    <dd className="text-tiny">
                       Georgian College
                     </dd>
                     <dt className="sr-only">Date</dt>
@@ -405,6 +405,7 @@ export const infotainment = () => {
                 color="default"
                 variant="bordered"
                 showAnchorIcon
+                isDisabled
               >
                 More Services
               </Button>
