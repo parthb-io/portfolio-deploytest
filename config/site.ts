@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
+	name: "Parth Bhatt portfolio",
+	description: "Software Developer, Tech Founder, Photographer, Web Developer, parthb.io.",
 	navItems: [
 		{
 			label: "Home",
@@ -81,10 +81,10 @@ export const siteConfig = {
 	// 	},
 	// ],
 	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
+		github: "https://github.com/parthb-io",
+		twitter: "",
+		docs: "",
+		discord: "",
     sponsor: "",
 	fiverr:"https://www.fiverr.com/parthb_io",
 	gosavis:"https://gosavis.com"

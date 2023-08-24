@@ -7,9 +7,9 @@ import {Image} from "@nextui-org/react";
 export default function AboutPage() {
 	return (
 		<>
-		<section className="py-6 bg-coolGray-50">
+		<section className="py-6 ">
   <div className="container mx-auto px-4">
-    <div className="flex flex-wrap -mx-4">
+    <div className="flex  flex-wrap -mx-4">
       <div className="w-full lg:w-1/2 xl:w-5/12 px-4  lg:mb-0">
         <div className="max-w-lg mx-auto lg:mx-0  ">
         <h1 className={title()}>

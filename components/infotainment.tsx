@@ -27,11 +27,11 @@ export const infotainment = () => {
     <>
       {/* infotainment cards */}
       <section className="container flex flex-col pt-16 relative  py-4">
-        <div className="container mx-auto w-full gap-4 md:gap-8  grid grid-cols-12 grid-rows-2  pb-10  ">
+        <div className="container mx-auto w-full gap-6 md:gap-8  grid grid-cols-12 grid-rows-2  pb-10  ">
           {/* card 1 */}
           <Card
             isFooterBlurred
-            className="relative w-full h-[450px] md:h-[500px] col-span-12 sm:col-span-12"
+            className="relative w-full h-[400px] col-span-12 sm:col-span-12"
           >
             <Image
               removeWrapper
@@ -48,7 +48,7 @@ export const infotainment = () => {
             </CardFooter>
           </Card>
           {/* Card 2 */}
-          <Card className="relative col-span-12 sm:col-span-6 h-[450px] md:h-[500px]">
+          <Card className="relative col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
@@ -190,8 +190,8 @@ export const infotainment = () => {
               </Button>
             </CardFooter>
           </Card>
-
-          <Card className="col-span-12 sm:col-span-6 h-[450px] md:h-[500px]">
+          {/* Card 3 */}
+          <Card className="col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
@@ -226,16 +226,17 @@ export const infotainment = () => {
             <Divider />
 
             <CardBody>
-              <div className="flex flex-col p-1 gap-6">
-                <Table
+              <div className=" flex flex-col p-1 gap-6">
+                <Table 
+                className="bg-transparent border-transparent"
                   color={"success"}
                   selectionMode="single"
                   defaultSelectedKeys={["2"]}
                   aria-label="Example static collection table"
                 >
-                  <TableHeader className="bg-transparent border-1 border-default-200">
+                  <TableHeader className="border-1 border-default-200">
                     <TableColumn>PROJECT</TableColumn>
-                    <TableColumn className="hidden lg:flex">ROLE</TableColumn>
+                    <TableColumn className="hidden lg:block" >Role</TableColumn>
                     <TableColumn>STATUS</TableColumn>
                   </TableHeader>
                   <TableBody>
@@ -249,11 +250,11 @@ export const infotainment = () => {
                           href="https://github.com/nextui-org/nextui"
                           anchorIcon={<AnchorIcon />}
                         >
-                          Bantsy AI
+                          BantsyAI Saas
                         </Link>
                       </TableCell>
                       <TableCell className="hidden lg:block">
-                        Web Developer
+                        Open AI Saas
                       </TableCell>
                       <TableCell>
                         <Chip
@@ -293,6 +294,7 @@ export const infotainment = () => {
                         </Chip>
                       </TableCell>
                     </TableRow>
+                    
                     <TableRow key="3">
                       <TableCell>
                         <Link
@@ -303,38 +305,11 @@ export const infotainment = () => {
                           href="https://github.com/nextui-org/nextui"
                           anchorIcon={<AnchorIcon />}
                         >
-                          William Howard
+                          Bikefy - Bike Rental
                         </Link>
                       </TableCell>
                       <TableCell className="hidden lg:block">
-                        Web3 Developer
-                      </TableCell>
-                      <TableCell>
-                        <Chip
-                          className="text-tiny md:text-sm"
-                          size="sm"
-                          color="success"
-                          variant="light"
-                        >
-                          Demo
-                        </Chip>
-                      </TableCell>
-                    </TableRow>
-                    <TableRow key="4">
-                      <TableCell>
-                        <Link
-                          className="text-tiny md:text-sm"
-                          color="foreground"
-                          isExternal
-                          showAnchorIcon
-                          href="https://github.com/nextui-org/nextui"
-                          anchorIcon={<AnchorIcon />}
-                        >
-                          Bantsy Store
-                        </Link>
-                      </TableCell>
-                      <TableCell className="hidden lg:block">
-                        Community Manager
+                        Saas Web App
                       </TableCell>
                       <TableCell>
                         <Chip
@@ -346,39 +321,14 @@ export const infotainment = () => {
                         </Chip>
                       </TableCell>
                     </TableRow>
-                    <TableRow className="" key="5">
-                      <TableCell>
-                        <Link
-                          className="text-tiny md:text-sm"
-                          color="foreground"
-                          isExternal
-                          showAnchorIcon
-                          href="https://github.com/nextui-org/nextui"
-                          anchorIcon={<AnchorIcon />}
-                        >
-                          William Howard
-                        </Link>
-                      </TableCell>
-                      <TableCell className="hidden lg:block">
-                        Community Manager
-                      </TableCell>
-                      <TableCell>
-                        <Chip
-                          className="text-tiny md:text-sm"
-                          color="primary"
-                          variant="light"
-                        >
-                          Active
-                        </Chip>
-                      </TableCell>
-                    </TableRow>
+                    
                   </TableBody>
                 </Table>
               </div>
             </CardBody>
           </Card>
           {/* card 4 */}
-          <Card className="col-span-12 sm:col-span-6 h-[450px] md:h-[500px]">
+          <Card className="col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
@@ -417,7 +367,7 @@ export const infotainment = () => {
                   <div className="flex flex-wrap items-center -m-1.5">
                     <div className="w-auto p-1.5 border-l border-purple-500 ">
                      
-                      <Link color="secondary" className="mb-1 text-sm md:text-md ml-2" href="#" underline="always">Fiverr Web Development Gig</Link>
+                      <Link color="success" className="mb-1 text-sm md:text-md ml-2" href="#" underline="always">I Will create Business GoDaddy website usibg Godaddy builder</Link>
                       <p className="text-tiny ml-2">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                         <br />
@@ -433,7 +383,7 @@ export const infotainment = () => {
                   <div className="flex flex-wrap items-center -m-1.5">
                     <div className="w-auto p-1.5 border-l border-purple-500 ">
                      
-                      <Link color="secondary" className="mb-1 text-sm md:text-md ml-2" href="#" underline="always">Fiverr Web Development Gig</Link>
+                      <Link color="secondary" className="mb-1 text-sm md:text-md ml-2" href="#" underline="always" isDisabled>Fiverr Web Development Gig</Link>
                       <p className="text-tiny ml-2">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                         <br />
@@ -444,23 +394,9 @@ export const infotainment = () => {
                 
               </div>
               <Divider/>
-              <div className="flex flex-wrap mb-2 py-1 px-4 items-center justify-between  rounded-md">
-                <div className="w-auto p-2">
-                  <div className="flex flex-wrap items-center -m-1.5">
-                    <div className="w-auto p-1.5 border-l border-purple-500 ">
-                     
-                      <Link color="secondary" className="mb-1 text-sm md:text-md ml-2" href="#" underline="always">Fiverr Web Development Gig</Link>
-                      <p className="text-tiny ml-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                        <br />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
+              
             </CardBody>
-            <CardFooter className="absolute bg-purple-500/10 bottom-0 z-10 border-t-1 border-purple-600 dark:border-purple-300">
+            <CardFooter className="absolute bg-black/10 bottom-0 z-10 border-t-1 border-purple-600 dark:border-purple-300">
               <div className="flex flex-grow gap-2 items-center">
                 <AvatarGroup  max={1} size="sm">
                   <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
@@ -483,7 +419,7 @@ export const infotainment = () => {
             </CardFooter>
           </Card>
           {/* card 5 */}
-          <Card className="col-span-12 sm:col-span-6 h-[450px] md: h-[500px]">
+          <Card className="col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
@@ -518,7 +454,7 @@ export const infotainment = () => {
 
             <Image
               alt="Woman listing to music"
-              className="object-cover h-[400px] md: h-[500px] w-full"
+              className="object-cover h-[350px] md:h-[400px] lg:h-[400px] w-full"
               src="https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw5Mnx8cXVvdGVzfGVufDB8fHx8MTY5MjQwMTY5MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
             />
             <CardFooter className="justify-between before:bg-white/10 border-black/30 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
