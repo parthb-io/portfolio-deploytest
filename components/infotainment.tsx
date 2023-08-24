@@ -376,7 +376,7 @@ export const infotainment = () => {
                      
                       <Link color="success" className="mb-1 text-sm md:text-md ml-2" href="https://www.fiverr.com/s/b3VgoP" underline="always">I will create custom business websites with godaddy builder</Link>
                       <p className="text-tiny ml-2">
-                      Using the versatile GoDaddy GoCentral builder, I'll bring your vision to life with a captivating website and a functional online store.{" "}
+                      Using the versatile GoDaddy GoCentral builder, I&apos;ll bring your vision to life with a captivating website and a functional online store.{" "}
                         <br />
                       </p>
                     </div>

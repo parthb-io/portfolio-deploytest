@@ -1,4 +1,4 @@
-"use client"
+
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
@@ -6,7 +6,7 @@ import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 
-import {Button} from "@nextui-org/react";
+// import {Button} from "@nextui-org/react";
 
 // import { infotainment as Infotainment } from "@/components/infotainment";
 
@@ -59,11 +59,11 @@ export default function RootLayout({
   <div className="mx-auto container px-4 pb-16 pt-6 sm:px-6 lg:px-8 ">
     <div className="text-center">
       <h2 className="text-2xl mb-6  md:text-3xl">
-        Want To Collaborate On A Project?
+        Let&apos;s To Collaborate On A Project?
       </h2>
-      <Button color="success" size="lg" radius="full" variant="ghost">
+      {/* <Button color="success" size="lg" radius="full" variant="ghost">
         Contact Now
-      </Button> 
+      </Button>  */}
 
       
 

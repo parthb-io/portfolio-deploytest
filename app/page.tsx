@@ -75,7 +75,7 @@ export default function Home() {
                         className=" mb-3 text-sm  lg:mr-2 md:mr-2 "
                         color="default"
                       >
-                        👋, I'm Parth Bhatt, <br />
+                        👋, I&apos;m Parth Bhatt, <br />
                       </Code>
                       <Code
                         className=" mb-6 text-sm lg:ml-2 md:ml-2 "
