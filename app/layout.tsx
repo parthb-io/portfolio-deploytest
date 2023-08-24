@@ -1,10 +1,13 @@
+"use client"
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
-import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
+
+import {Button} from "@nextui-org/react";
+
 // import { infotainment as Infotainment } from "@/components/infotainment";
 
 import { Link } from "@nextui-org/link";
@@ -37,14 +40,14 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-mono antialiased",
           fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex  flex-col h-screen">
             <Navbar />
-            <main className="relative flex container mx-auto    pt-10 md:py-12 ">
+            <main className="relative font-mono flex container mx-auto    pt-10 md:py-12 ">
           
               {children}
             </main>
@@ -55,18 +58,16 @@ export default function RootLayout({
             
   <div className="mx-auto container px-4 pb-16 pt-6 sm:px-6 lg:px-8 ">
     <div className="text-center">
-      <h2 className="text-2xl  md:text-3xl">
+      <h2 className="text-2xl mb-6  md:text-3xl">
         Want To Collaborate On A Project?
       </h2>
+      <Button color="success" size="lg" radius="full" variant="ghost">
+        Contact Now
+      </Button> 
 
       
 
-      <a
-        href="#"
-        className="mt-8 inline-block rounded-full border border-indigo-600 px-12 py-3 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-      >
-        Subscribe
-      </a>
+      
     </div>
 
     <div

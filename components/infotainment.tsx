@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
-import { Input } from "@nextui-org/input";
+
 import {
   Table,
   TableHeader,
@@ -19,10 +19,16 @@ import { Chip } from "@nextui-org/react";
 import { Link } from "@nextui-org/react";
 import {Textarea} from "@nextui-org/react";
 
-
+import { saveAs } from "file-saver";
 import { AnchorIcon } from "./anchor-icon";
 
 export const infotainment = () => {
+  const saveFile = () => {
+    saveAs(
+      
+      "resume.pdf"
+    );
+  };
   return (
     <>
       {/* infotainment cards */}
@@ -84,22 +90,22 @@ export const infotainment = () => {
             <CardBody className="mb-4">
               <ol className="mt-3 space-y-4">
                 <li className="flex gap-4">
-                  <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <div className="relative mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image
                       alt="nextui logo"
-                      height={30}
+                      height={50}
                       radius="sm"
                       src="./vebcommerce-logo.png"
-                      width={30}
+                      width={50}
                     />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">
                     <dt className="sr-only ">Company</dt>
                     <dd className="w-full flex-none text-sm md:text-md ">
-                      Full-stack Developer / Project Manager
+                      Full-stack Developer 
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className="mt-1 hidden text-tiny sm:block">
+                    <dd className="text-tiny ">
                       VebCommerce
                     </dd>
                     <dt className="sr-only hidden">Date</dt>
@@ -115,22 +121,22 @@ export const infotainment = () => {
                 </li>
                 <Divider />
                 <li className="flex gap-4">
-                  <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <div className="relative mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image
                       alt="nextui logo"
-                      height={30}
+                      height={50}
                       radius="sm"
                       src="./lofcart-logo.png"
-                      width={30}
+                      width={50}
                     />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">
                     <dt className="sr-only">Company</dt>
                     <dd className="w-full text-sm md:text-md flex-none ">
-                      Web Developer / Project Co-ordinator
+                      Web Developer 
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className="hidden sm:block text-tiny">
+                    <dd className=" text-tiny">
                       Lofcart Alberta Ltd
                     </dd>
                     <dt className="sr-only">Date</dt>
@@ -146,13 +152,13 @@ export const infotainment = () => {
                 </li>
                 <Divider />
                 <li className="flex gap-4">
-                  <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <div className="relative mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/40 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <Image
                       alt="nextui logo"
-                      height={30}
+                      height={50}
                       radius="sm"
                       src="georgian-logo.png"
-                      width={30}
+                      width={50}
                     />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -161,7 +167,7 @@ export const infotainment = () => {
                       Computer Programmer / Diploma Program
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className="hidden  sm:block text-tiny">
+                    <dd className=" text-tiny">
                       Georgian College
                     </dd>
                     <dt className="sr-only">Date</dt>
@@ -180,11 +186,12 @@ export const infotainment = () => {
 
             <CardFooter className="absolute mb-2 mt-6 pt-6 bottom-0 z-10 ">
               <Button
-                href="https://docs.google.com/document/d/1L8xBEcyQcA0kBVaIT4wzzeqeyO9zXk7WeTDBUyzFytE/edit?usp=sharing"
+                // href="https://docs.google.com/document/d/1L8xBEcyQcA0kBVaIT4wzzeqeyO9zXk7WeTDBUyzFytE/edit?usp=sharing"
                 as={Link}
                 color="default"
                 showAnchorIcon
                 variant="bordered"
+                onClick={saveFile}
               >
                 Download Cv
               </Button>
@@ -367,9 +374,9 @@ export const infotainment = () => {
                   <div className="flex flex-wrap items-center -m-1.5">
                     <div className="w-auto p-1.5 border-l border-purple-500 ">
                      
-                      <Link color="success" className="mb-1 text-sm md:text-md ml-2" href="#" underline="always">I Will create Business GoDaddy website usibg Godaddy builder</Link>
+                      <Link color="success" className="mb-1 text-sm md:text-md ml-2" href="https://www.fiverr.com/s/b3VgoP" underline="always">I will create custom business websites with godaddy builder</Link>
                       <p className="text-tiny ml-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                      Using the versatile GoDaddy GoCentral builder, I'll bring your vision to life with a captivating website and a functional online store.{" "}
                         <br />
                       </p>
                     </div>
@@ -378,22 +385,7 @@ export const infotainment = () => {
                 
               </div>
               <Divider />
-              <div className="flex flex-wrap mb-2 py-1 px-4 items-center justify-between  rounded-md">
-                <div className="w-auto p-2">
-                  <div className="flex flex-wrap items-center -m-1.5">
-                    <div className="w-auto p-1.5 border-l border-purple-500 ">
-                     
-                      <Link color="secondary" className="mb-1 text-sm md:text-md ml-2" href="#" underline="always" isDisabled>Fiverr Web Development Gig</Link>
-                      <p className="text-tiny ml-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                        <br />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              <Divider/>
+              
               
             </CardBody>
             <CardFooter className="absolute bg-black/10 bottom-0 z-10 border-t-1 border-purple-600 dark:border-purple-300">
