@@ -9,18 +9,38 @@ import { Divider } from "@nextui-org/react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Code } from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
+import Script from 'next/script';
 
 import { infotainment as Infotainment } from "@/components/infotainment";
 
 export default function Home() {
+
   const defaultContent =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
   return (
     <>
+    {/* <!-- Google tag (gtag.js) --> */}
+     <Script src="https://www.googletagmanager.com/gtag/js?id=G-Y67B43DHVB" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-Y67B43DHVB');
+        `}
+      </Script>
+      {/* <!-- gtag.js-ends --> */}
+      
+
       <section className="container px-2 md:px-10 lg:px-16 flex flex-col items-center justify-center gap-4 py-4 ">
         <div className="container mx-auto w-full px-2 md:px-16 lg:px-12   pb-20 ">
+          
+          {/* hero-section */}
           <section className="py-12  ">
             <div className="container mx-auto px-4">
+              {/* mobile-about-chip */}
               <Chip
                 className="sm:hidden mx-4 text-tiny"
                 color="success"
@@ -29,7 +49,10 @@ export default function Home() {
                 About me
               </Chip>
 
+              {/* bio-subsection */}
               <div className="flex flex-wrap -mx-4 mb-12">
+                
+                {/* image */}
                 <div className="lg:w-1/2 xl:w-5/12 px-4 mb-10 lg:mb-0">
                   <Image
                     isBlurred
@@ -59,8 +82,11 @@ export default function Home() {
                     {""}{" "}
                   </h1>
                 </div>
+
+                {/* bio */}
                 <div className="lg:w-1/2 xl:w-7/12 px-4">
                   <div className="max-w-2xl lg:pl-12  lg:ml-auto">
+                    {/* about-chip */}
                     <Chip
                       className="hidden lg:flex text-tiny mb-6"
                       size="sm"
@@ -70,6 +96,7 @@ export default function Home() {
                       About me
                     </Chip>
 
+                    {/* bio-code-section */}
                     <div className="flex flex-wrap ">
                       <Code
                         className=" mb-3 text-sm  lg:mr-2 md:mr-2 "
@@ -123,7 +150,8 @@ export default function Home() {
                         .{" "}
                       </Code>
                     </div>
-
+                    
+                    {/* bio-text */}
                     <p className="text-md font-mono mb-4 leading-normal ">
                       Parthb.io is a tech initiative that seeks out regions and
                       markets with robust underlying catalysts, and income
@@ -137,8 +165,10 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* accordion-subsection */}
               <div className=" py-10 md:py-20">
                 <ul>
+                  {/* work-experience */}
                   <li className="flex items-center px-3 justify-between mb-4 pb-2 ">
                     <span className="text-md font-semibold lg:text-lg">Work Experience</span>
                     <span className="text-sm lg:text-xl">
@@ -148,6 +178,7 @@ export default function Home() {
                     </span>
                   </li>
                   <Divider className="my-4" />
+                  {/* projects-list */}
                   <li className="flex items-center px-3  justify-between mb-4 pb-2 ">
                     <span className="text-md font-semibold lg:text-lg">Projects Finished</span>
                     <span className="text-sm  lg:text-xl">
@@ -155,9 +186,8 @@ export default function Home() {
                       
                     </span>
                   </li>
-
                   <Divider className="my-4" />
-
+                  {/* accordion */}
                   <Accordion variant="light">
                     <AccordionItem
                     className="font-mono text-sm font-semibold lg:text-md"
@@ -206,7 +236,9 @@ export default function Home() {
               </div>
             </div>
           </section>
-
+          {/* hero-section-ends */}
+          
+          {/* card-section */}
           <Infotainment />
         </div>
       </section>

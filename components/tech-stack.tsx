@@ -1,11 +1,11 @@
 import { Tabs, Tab } from "@nextui-org/tabs";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody} from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
-import {Tooltip, Button} from "@nextui-org/react";
+import {Tooltip} from "@nextui-org/react";
 export const tech = () => {
   return (
     <>
-      {/* tabs */}
+      {/* tabs-begin */}
       <div className="flex w-full flex-col mt-10">
         <Tabs
           aria-label="Options"
@@ -19,6 +19,7 @@ export const tech = () => {
             tabContent: "group-data-[selected=true]:text-[#06b6d4]",
           }}
         >
+          {/* career-tab */}
           <Tab key="career" title="Career Preference">
             <Card>
               <CardBody>
@@ -45,10 +46,13 @@ export const tech = () => {
               </CardBody>
             </Card>
           </Tab>
+
+          {/* techstack-tab */}
           <Tab key="stack" title="Daily TechStack">
             <Card>
               <CardBody className="gap-4" >
                 <div className="">
+                  {/* image-1 */}
                   <div className="mr-6  inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Tooltip color="primary" showArrow={true} closeDelay={2000} content="Mongo.db">
                     <Image
@@ -61,6 +65,7 @@ export const tech = () => {
                   </Tooltip>
                     
                   </div>
+                  {/* image-2 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Tooltip color="primary" showArrow={true} closeDelay={2000} content="Wordpress">
                   <Image
@@ -72,6 +77,7 @@ export const tech = () => {
                     />
                   </Tooltip>
                   </div>
+                  {/* image-3 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image
                       alt="html5 logo"
@@ -81,6 +87,7 @@ export const tech = () => {
                       width={32}
                     />
                   </div>
+                  {/* image-4 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image
                       alt="css3 logo"
@@ -90,6 +97,7 @@ export const tech = () => {
                       width={32}
                     />
                   </div>
+                  {/* image-5 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image
                       alt="express js logo"
@@ -99,6 +107,7 @@ export const tech = () => {
                       width={32}
                     />
                   </div>
+                  {/* image-6 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image
                       alt="agile logo"
@@ -108,6 +117,7 @@ export const tech = () => {
                       width={32}
                     />
                   </div>
+                  {/* image-7 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image
                       alt="graphql logo"
@@ -117,6 +127,7 @@ export const tech = () => {
                       width={32}
                     />
                   </div>
+                  {/* image-8 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image
                       alt="prisma logo"
@@ -126,6 +137,7 @@ export const tech = () => {
                       width={32}
                     />
                   </div>
+                  {/* image-9 */}
                   <div className="mr-4 mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-400 p-1">
                   <Image
                       alt="auth0 logo"

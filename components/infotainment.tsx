@@ -4,7 +4,6 @@ import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
-
 import {
   Table,
   TableHeader,
@@ -12,22 +11,15 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  RadioGroup,
-  Radio,
 } from "@nextui-org/react";
 import { Chip } from "@nextui-org/react";
 import { Link } from "@nextui-org/react";
-import {Textarea} from "@nextui-org/react";
-
 import { saveAs } from "file-saver";
 import { AnchorIcon } from "./anchor-icon";
 
 export const infotainment = () => {
   const saveFile = () => {
-    saveAs(
-      
-      "resume.pdf"
-    );
+    saveAs("resume.pdf");
   };
   return (
     <>
@@ -102,12 +94,10 @@ export const infotainment = () => {
                   <dl className="flex flex-auto flex-wrap gap-x-2">
                     <dt className="sr-only ">Company</dt>
                     <dd className="w-full flex-none text-sm md:text-md ">
-                      Full-stack Developer 
+                      Full-stack Developer
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className="text-tiny ">
-                      VebCommerce
-                    </dd>
+                    <dd className="text-tiny ">VebCommerce</dd>
                     <dt className="sr-only hidden">Date</dt>
                     <dd
                       className="ml-auto mt-1 text-tiny text-blue-500"
@@ -133,12 +123,10 @@ export const infotainment = () => {
                   <dl className="flex flex-auto flex-wrap gap-x-2">
                     <dt className="sr-only">Company</dt>
                     <dd className="w-full text-sm md:text-md flex-none ">
-                      Web Developer 
+                      Web Developer
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className="text-tiny">
-                      Lofcart Alberta Ltd
-                    </dd>
+                    <dd className="text-tiny">Lofcart Alberta Ltd</dd>
                     <dt className="sr-only">Date</dt>
                     <dd
                       className="ml-auto text-tiny text-blue-500 "
@@ -167,9 +155,7 @@ export const infotainment = () => {
                       Computer Programmer / Diploma-Program
                     </dd>
                     <dt className="sr-only hidden sm:block">Role</dt>
-                    <dd className="text-tiny">
-                      Georgian College
-                    </dd>
+                    <dd className="text-tiny">Georgian College</dd>
                     <dt className="sr-only">Date</dt>
                     <dd
                       className="ml-auto text-tiny text-blue-500"
@@ -234,8 +220,8 @@ export const infotainment = () => {
 
             <CardBody>
               <div className=" flex flex-col p-1 gap-6">
-                <Table 
-                className="bg-transparent border-transparent"
+                <Table
+                  className="bg-transparent border-transparent"
                   color={"success"}
                   selectionMode="single"
                   defaultSelectedKeys={["2"]}
@@ -243,7 +229,7 @@ export const infotainment = () => {
                 >
                   <TableHeader className="border-1 border-default-200">
                     <TableColumn>PROJECT</TableColumn>
-                    <TableColumn className="hidden lg:block" >Role</TableColumn>
+                    <TableColumn className="hidden lg:block">Role</TableColumn>
                     <TableColumn>STATUS</TableColumn>
                   </TableHeader>
                   <TableBody>
@@ -301,7 +287,7 @@ export const infotainment = () => {
                         </Chip>
                       </TableCell>
                     </TableRow>
-                    
+
                     <TableRow key="3">
                       <TableCell>
                         <Link
@@ -328,7 +314,6 @@ export const infotainment = () => {
                         </Chip>
                       </TableCell>
                     </TableRow>
-                    
                   </TableBody>
                 </Table>
               </div>
@@ -373,24 +358,29 @@ export const infotainment = () => {
                 <div className="w-auto p-2">
                   <div className="flex flex-wrap items-center -m-1.5">
                     <div className="w-auto p-1.5 border-l border-purple-500 ">
-                     
-                      <Link color="success" className="mb-1 text-sm md:text-md ml-2" href="https://www.fiverr.com/s/b3VgoP" underline="always">I will create custom business websites with godaddy builder</Link>
+                      <Link
+                        color="success"
+                        className="mb-1 text-sm md:text-md ml-2"
+                        href="https://www.fiverr.com/s/b3VgoP"
+                        underline="always"
+                      >
+                        I will create custom business websites with godaddy
+                        builder
+                      </Link>
                       <p className="text-tiny ml-2">
-                      Using the versatile GoDaddy GoCentral builder, I&apos;ll bring your vision to life with a captivating website and a functional online store.{" "}
-                        <br />
+                        Using the versatile GoDaddy GoCentral builder, I&apos;ll
+                        bring your vision to life with a captivating website and
+                        a functional online store. <br />
                       </p>
                     </div>
                   </div>
                 </div>
-                
               </div>
               <Divider />
-              
-              
             </CardBody>
             <CardFooter className="absolute bg-black/10 bottom-0 z-10 border-t-1 border-purple-600 dark:border-purple-300">
               <div className="flex flex-grow gap-2 items-center">
-                <AvatarGroup  max={1} size="sm">
+                <AvatarGroup max={1} size="sm">
                   <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
                   <Avatar src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
                   <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
@@ -463,8 +453,6 @@ export const infotainment = () => {
               </Button>
             </CardFooter>
           </Card>
-          {/* card 6 */}
-         
         </div>
       </section>
 
