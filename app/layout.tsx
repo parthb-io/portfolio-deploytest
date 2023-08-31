@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
+import Script from 'next/script';
 
 // import {Button} from "@nextui-org/react";
 
@@ -34,7 +35,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        {/* <!-- Google tag (gtag.js) --> */}
+     <Script src="https://www.googletagmanager.com/gtag/js?id=G-Y67B43DHVB" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-Y67B43DHVB');
+        `}
+      </Script>
+      {/* <!-- gtag.js-ends --> */}
+      </head>
+      {/* <head /> */}
+      
       <body
         className={clsx(
           "min-h-screen bg-background font-mono antialiased",
