@@ -128,19 +128,19 @@ export default function DocsPage() {
     <section className="container px-2 md:px-10 lg:px-16 flex flex-col items-center justify-center gap-4 py-4 ">
       <div className="container mx-auto w-full px-2 md:px-16 lg:px-12   pb-20 ">
         {/* hero-section */}
-        <div className="mb-8 px-8    pb-8 font-mono">
-          <h1 className={title()}>{""} Things I’ve made trying to put my</h1>
-          <br />
+        <div className="mb-8 px-8  overflow-hidden  pb-8 font-mono">
+          <h1 className={title()}>{""} Things I’ve made trying to put my </h1>
+
           <h1 className={title({ class: "mt-2  text-emerald-500" })}>
-            dent in the universe.{""}{" "}
+            {""} dent in the universe.{""}{" "}
           </h1>
 
-          <p className="font-medium mt-8 leading-normal ">
+          {/* <p className="font-medium mt-8 leading-normal ">
             I’ve worked on tons of little projects over the years but these are
             the ones that I’m most proud of. Many of them are open-source, so if
             you see something that piques your interest, check out the code and
             contribute if you have ideas for how it can be improved.
-          </p>
+          </p> */}
 
           {/* <div className="mb-4 mt-8 flex flex-wrap gap-3">
             <a
@@ -167,16 +167,17 @@ export default function DocsPage() {
           </div> */}
         </div>
         <Divider className="px-8" />
+
         {/* card-section */}
-        <div className="container mx-auto w-full gap-6 grid grid-cols-12 pt-24 grid-rows-2 px-8">
+        <div className="container mx-auto w-full gap-6 grid grid-cols-12 py-16 grid-rows-2 px-8">
           {/* Card-1 */}
-          <Card className="col-span-12  sm:col-span-6 ">
+          <Card shadow="lg" className="col-span-12  sm:col-span-6 ">
             <CardHeader className="flex gap-3">
               <Image
                 alt="nextui logo"
                 height={40}
                 radius="sm"
-                src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+                src="/profile-logo.svg"
                 width={40}
               />
               <div className="flex flex-col">
@@ -187,7 +188,11 @@ export default function DocsPage() {
             <Divider />
             <CardBody>
               <p>
-                Make beautiful websites regardless of your design experience.
+                I’ve worked on tons of little projects over the years but these
+                are the ones that I’m most proud of. Many of them are
+                open-source, so if you see something that piques your interest,
+                check out the code and contribute if you have ideas for how it
+                can be improved.
               </p>
             </CardBody>
             <Divider />
@@ -203,41 +208,87 @@ export default function DocsPage() {
           </Card>
           {/* Cards 2&3 */}
           <div className="col-span-12 sm:col-span-6 flex flex-col mx-auto w-full gap-8">
-            <Card className="overflow-hidden p-4 relative ">
+            <Card shadow="lg" className="overflow-hidden p-4 relative ">
               <CardHeader className="justify-between">
-                <div className="flex gap-5">
+                <div className="flex gap-5 ">
                   <Avatar
                     isBordered
                     radius="full"
                     size="md"
-                    src="/avatars/avatar-1.png"
+                    src="/profile-logo.svg"
                   />
-                  <div className="flex flex-col gap-1 items-start justify-center">
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="primary"
+                    src="https://i.pravatar.cc/150?u=a04258a2462d826712d"
+                  />
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="secondary"
+                    src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                  />
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="success"
+                    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+                  />
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="warning"
+                    src="https://i.pravatar.cc/150?u=a04258114e29026702d"
+                  />
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="danger"
+                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
+                  />
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="danger"
+                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
+                    className="hidden  lg:flex md:flex"
+                  />
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="danger"
+                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
+                    className="hidden  lg:flex md:flex"
+                  />
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="md"
+                    color="danger"
+                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
+                    className="hidden  lg:flex md:flex"
+                  />
+                  {/* <div className="flex flex-col gap-1 items-start justify-center">
                     <h4 className="text-small font-semibold leading-none text-default-600">
                       Zoey Lang
                     </h4>
                     <h5 className="text-small tracking-tight text-default-400">
                       @zoeylang
                     </h5>
-                  </div>
+                  </div> */}
                 </div>
-                <Button
-                  className={
-                    isFollowed
-                      ? "bg-transparent text-foreground border-default-200"
-                      : ""
-                  }
-                  color="primary"
-                  radius="full"
-                  size="sm"
-                  variant={isFollowed ? "bordered" : "solid"}
-                  onPress={() => setIsFollowed(!isFollowed)}
-                >
-                  {isFollowed ? "Unfollow" : "Follow"}
-                </Button>
+                
               </CardHeader>
             </Card>
-            <Card className="overflow-hidden p-4 relative ">
+            <Card shadow="lg" className="overflow-hidden p-4 relative ">
               <CardHeader className="justify-between">
                 <div className="flex gap-5">
                   <Avatar
@@ -270,6 +321,7 @@ export default function DocsPage() {
                   {isFollowed ? "Unfollow" : "Follow"}
                 </Button>
               </CardHeader>
+              <Divider className="my-4" />
               <CardBody className="px-3 overflow-hidden py-0 text-small text-default-400">
                 <p>
                   Frontend developer and UI/UX enthusiast. Join me on this
@@ -298,6 +350,7 @@ export default function DocsPage() {
           </div>
           {/* Card 4  */}
           <Card
+            shadow="lg"
             isFooterBlurred
             className="w-full h-[300px] col-span-12 sm:col-span-4"
           >
@@ -305,8 +358,8 @@ export default function DocsPage() {
               <h1 className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
                 1
               </h1>
-              
             </CardHeader>
+           
             <Image
               removeWrapper
               alt="Card background"
@@ -315,18 +368,24 @@ export default function DocsPage() {
               src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
             />
             <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-        <div>
-          <p className="text-black text-tiny">Available soon.</p>
-          <p className="text-black text-tiny">Get notified.</p>
-        </div>
-        <Button className="text-tiny" color="primary" radius="full" size="sm">
-          Notify Me
-        </Button>
-      </CardFooter>
+              <div>
+                <p className="text-black text-tiny">Available soon.</p>
+                <p className="text-black text-tiny">Get notified.</p>
+              </div>
+              <Button
+                className="text-tiny"
+                color="primary"
+                radius="full"
+                size="sm"
+              >
+                Notify Me
+              </Button>
+            </CardFooter>
           </Card>
 
           {/* Card 5  */}
           <Card
+            shadow="lg"
             isFooterBlurred
             className="w-full h-[300px] col-span-12 sm:col-span-4"
           >
@@ -334,7 +393,6 @@ export default function DocsPage() {
               <h1 className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
                 2
               </h1>
-              
             </CardHeader>
             <Image
               removeWrapper
@@ -344,18 +402,24 @@ export default function DocsPage() {
               src="https://images.unsplash.com/photo-1635656731280-293c96c2ebb8?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwyMHx8cG9ydGZvbGlvfGVufDB8Mnx8fDE2OTM0MzIxNjd8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
             />
             <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-        <div>
-          <p className="text-black text-tiny">Available soon.</p>
-          <p className="text-black text-tiny">Get notified.</p>
-        </div>
-        <Button className="text-tiny" color="primary" radius="full" size="sm">
-          Notify Me
-        </Button>
-      </CardFooter>
+              <div>
+                <p className="text-black text-tiny">Available soon.</p>
+                <p className="text-black text-tiny">Get notified.</p>
+              </div>
+              <Button
+                className="text-tiny"
+                color="primary"
+                radius="full"
+                size="sm"
+              >
+                Notify Me
+              </Button>
+            </CardFooter>
           </Card>
 
           {/* card-6 */}
           <Card
+            shadow="lg"
             isFooterBlurred
             className="w-full h-[300px] col-span-12 sm:col-span-4"
           >
@@ -363,7 +427,6 @@ export default function DocsPage() {
               <h1 className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
                 3
               </h1>
-              
             </CardHeader>
             <Image
               removeWrapper
@@ -373,18 +436,24 @@ export default function DocsPage() {
               src="https://images.unsplash.com/photo-1436397543931-01c4a5162bdb?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwzM3x8cG9ydGZvbGlvfGVufDB8Mnx8fDE2OTM0MzIxOTl8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
             />
             <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-        <div>
-          <p className="text-black text-tiny">Available soon.</p>
-          <p className="text-black text-tiny">Get notified.</p>
-        </div>
-        <Button className="text-tiny" color="primary" radius="full" size="sm">
-          Notify Me
-        </Button>
-      </CardFooter>
+              <div>
+                <p className="text-black text-tiny">Available soon.</p>
+                <p className="text-black text-tiny">Get notified.</p>
+              </div>
+              <Button
+                className="text-tiny"
+                color="primary"
+                radius="full"
+                size="sm"
+              >
+                Notify Me
+              </Button>
+            </CardFooter>
           </Card>
 
           {/* card-7 */}
           <Card
+            shadow="lg"
             isFooterBlurred
             className="w-full h-[300px] col-span-12 sm:col-span-4"
           >
@@ -392,7 +461,6 @@ export default function DocsPage() {
               <p className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
                 4
               </p>
-              
             </CardHeader>
             <Image
               removeWrapper
@@ -402,14 +470,19 @@ export default function DocsPage() {
               src="https://images.unsplash.com/photo-1633876841461-772d2b0b0e39?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwxN3x8cG9ydGZvbGlvfGVufDB8Mnx8fDE2OTM0MzIxNjd8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
             />
             <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-        <div>
-          <p className="text-black text-tiny">Available soon.</p>
-          <p className="text-black text-tiny">Get notified.</p>
-        </div>
-        <Button className="text-tiny" color="primary" radius="full" size="sm">
-          Notify Me
-        </Button>
-      </CardFooter>
+              <div>
+                <p className="text-black text-tiny">Available soon.</p>
+                <p className="text-black text-tiny">Get notified.</p>
+              </div>
+              <Button
+                className="text-tiny"
+                color="primary"
+                radius="full"
+                size="sm"
+              >
+                Notify Me
+              </Button>
+            </CardFooter>
           </Card>
         </div>
       </div>

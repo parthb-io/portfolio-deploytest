@@ -28,9 +28,12 @@ export const infotainment = () => {
         <div className="container mx-auto w-full gap-6 md:gap-8  grid grid-cols-12 grid-rows-2  pb-10  ">
           {/* card 1 */}
           <Card
+          shadow="lg"
             isFooterBlurred
             className="relative w-full h-[400px] col-span-12 sm:col-span-12"
           >
+            {/* <video autoPlay loop src="https://streamable.com/e/wbe2ic" className="w-full h-full z-0"></video> */}
+            {/* <video src={require('https://streamable.com/e/wbe2ic')} /> */}
             <Image
               removeWrapper
               isZoomed
@@ -46,7 +49,7 @@ export const infotainment = () => {
             </CardFooter>
           </Card>
           {/* Card 2 */}
-          <Card className="relative col-span-12 sm:col-span-6 h-[400px]">
+          <Card shadow="lg" className="relative col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
@@ -184,7 +187,7 @@ export const infotainment = () => {
             </CardFooter>
           </Card>
           {/* Card 3 */}
-          <Card className="col-span-12 sm:col-span-6 h-[400px]">
+          <Card shadow="lg" className="col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
@@ -320,7 +323,7 @@ export const infotainment = () => {
             </CardBody>
           </Card>
           {/* card 4 */}
-          <Card className="col-span-12 sm:col-span-6 h-[400px]">
+          <Card shadow="lg" className="col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
@@ -402,7 +405,7 @@ export const infotainment = () => {
             </CardFooter>
           </Card>
           {/* card 5 */}
-          <Card className="col-span-12 sm:col-span-6 h-[400px]">
+          <Card shadow="lg" className="col-span-12 sm:col-span-6 h-[400px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <Image
