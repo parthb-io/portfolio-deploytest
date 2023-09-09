@@ -65,8 +65,8 @@ export default function Home() {
                 color="foreground"
                 aria-label="Github"
               >
-                <GithubIcon className="text-default-500 mr-2" /> Check Github
-                repos
+                <GithubIcon className="text-default-500 mr-2" /> Star Github
+               
               </Link>
             </Button>
             <Button
@@ -77,7 +77,7 @@ export default function Home() {
               color="danger"
               variant="shadow"
             >
-              Grab a Coffee ☕
+              Chat ☕
             </Button>
           </div>
         </div>
