@@ -60,7 +60,7 @@ export default function Home() {
       </Button>
       <Button className="mt-16 " color="primary" variant="flat">
             
-            Let's chat
+            Let&apos;s chat
           
       </Button>
 
