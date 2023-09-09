@@ -47,7 +47,7 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold font-mono text-inherit">Parthb.io</p>
+            <p className="font-bold font-mono ml-2 text-inherit">Parthb.io</p>
           </NextLink>
         </NavbarBrand>
         {/* menu-items */}
@@ -68,7 +68,7 @@ export const Navbar = () => {
           ))}
         </ul>
         <Chip className="hidden md:flex lg:flex ml-2 w-full" size="sm"  color="success" variant="flat"> <Link className="text-tiny " href="#" underline="focus" color="success" size="lg">Open To Work 🚀</Link></Chip>
-        <Chip className=" md:hidden lg:hidden ml-2 w-full" size="sm"  color="success" variant="flat"> <Link className="text-tiny " href="#" underline="focus" color="success" size="lg">Hire Me 💼</Link></Chip>
+       
       </NavbarContent>
 
       {/* menu-icons-buttons */}

@@ -3,6 +3,7 @@
 import React from "react";
 import { saveAs } from "file-saver";
 import ReactCountryFlag from "react-country-flag";
+import { siteConfig } from "@/config/site";
 
 import {
   Card,
@@ -20,6 +21,7 @@ import {
   Progress,
   AvatarGroup,
 } from "@nextui-org/react";
+import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
   const saveFile = () => {
@@ -46,11 +48,33 @@ export default function Home() {
   return (
     <>
       <section className="container px-2 lg:px-6  flex flex-col items-center justify-center  py-16 ">
+
+        <div className="z-10 w-full items-center justify-center max-w-4xl py-6 pb-16 px-5 xl:px-0">
+        <h1 className="animate-fade-up  bg-clip-text text-center font-display text-4xl font-bold  drop-shadow-sm md:text-6xl md:leading-[5rem]">Building blocks for your Next Project</h1>
+        <p className="mt-6  text-center text-default-500 m"> An opinionated collection of code, webhooks, and resources for your web project.</p>
+        <div className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 ">
+        <Button className="mt-16 " color="default" variant="bordered">
+            <Link isExternal href={siteConfig.links.github} color="foreground" aria-label="Github">
+            <GithubIcon className="text-default-500 mr-2" /> Star on Github
+          </Link>
+      </Button>
+      <Button className="mt-16 " color="primary" variant="flat">
+            
+            Let's chat
+          
+      </Button>
+
+        </div>
+       
+        </div>
+        
+
+
         <div className="container py-6 px-6 grid grid-cols-12 mx-auto w-full gap-6">
           <Card shadow="lg" className="col-span-12 p-4 sm:col-span-8">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
-                <Badge content="new" color="secondary" size="sm">
+                <Badge content="hire" color="secondary" size="sm">
                   <Avatar
                     isBordered
                     radius="lg"
@@ -63,7 +87,7 @@ export default function Home() {
                     Parth Bhatt
                   </h4>
                   <h5 className="text-tiny md:text-sm lg:text-sm tracking-tight  mr-4 text-default-500">
-                    @parthb.io | Associate Fullstack Dev
+                    @parthb.io 
                   </h5>
                 </div>
               </div>
@@ -148,10 +172,12 @@ export default function Home() {
               </Snippet>
 
               <Snippet
-                className="text-purple-400 font-semibold  text-tiny"
+                className="text-purple-400 font-semibold  text-tiny "
                 symbol="#"
                 hideCopyButton
                 variant="bordered"
+                size="sm"
+                color="secondary"
               >
                 codewithBantsy 💻
               </Snippet>
@@ -160,6 +186,8 @@ export default function Home() {
                 symbol="#"
                 hideCopyButton
                 variant="bordered"
+                size="sm"
+                color="secondary"
               >
                 codewithBantsy 💻
               </Snippet>
@@ -427,7 +455,8 @@ export default function Home() {
               </div>
               <Divider />
             </CardBody>
-            <CardFooter className="absolute bg-black/10 bottom-0 z-10 border-t-1 border-purple-600 dark:border-purple-300">
+            <CardFooter className="bg-black/10 bottom-0 z-10 border-t-1 border-purple-600
+             dark:border-purple-300">
               
               <Button
                 href=""
@@ -448,43 +477,21 @@ export default function Home() {
           <Card
             isFooterBlurred
             shadow="lg"
-            className="col-span-12 p-4 sm:col-span-4"
+            className="col-span-12  sm:col-span-4"
           >
-            <CardHeader className="justify-between">
-              <div className="flex gap-5">
-                <Image
-                  alt="nextui logo"
-                  height={40}
-                  radius="sm"
-                  src="/profile-logo.svg"
-                  width={40}
-                />
-                <div className="flex flex-col">
-                  <p className="text-md">Resume / Bio</p>
-                  <p className="text-small  text-default-500">
-                    Work & Education Exp
-                  </p>
-                </div>
-              </div>
-              <div className="mb-2 flex items-center justify-end">
-                <a className="mr-2 rounded-full bg-blue-200 p-1" href="#">
-                  <div className="h-2 w-2 rounded-full bg-blue-600"></div>
-                </a>
-                <a
-                  className="mr-3 h-1 w-1 rounded-full bg-gray-200"
-                  href="#"
-                ></a>
-                <a
-                  className="mr-3 h-1 w-1 rounded-full bg-gray-200"
-                  href="#"
-                ></a>
-                <a className="h-1 w-1 rounded-full bg-gray-200" href="#"></a>
-              </div>
-            </CardHeader>
-            <Divider />
-            <CardBody className="mb-4"></CardBody>
+             <Image
+              removeWrapper
+              isZoomed
+              isBlurred
+              alt="Relaxing app background"
+              className="  w-auto h-[300px] md:h-auto lg:h-full object-cover"
+              shadow="lg"
+              radius="lg"
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwzMXx8dHJhdmVsJTIwd2Vic2l0ZXxlbnwwfHx8fDE2OTI1NzYzMDJ8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+            />
 
-            <CardFooter className="absolute mb-2 mt-6 pt-6 bottom-0 z-10 "></CardFooter>
+            <CardFooter className="absolute  bottom-0 z-10 ">
+              <p>Feature Loading Soon...</p></CardFooter>
           </Card>
           {/* card3 */}
         </div>
