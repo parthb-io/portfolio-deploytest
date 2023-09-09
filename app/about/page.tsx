@@ -46,7 +46,7 @@ export default function BlogPage() {
                   </h2>
                   <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                     <p>
-                      I&apos;ve always envisioned things, be it code, design, decisions, emotions, for as long as I can remember. This website is just another definition of what I have an ability for matched with what I'm willing to hustle to get. 
+                      I&apos;ve always envisioned things, be it code, design, decisions, emotions, for as long as I can remember. This website is just another definition of what I have an ability for matched with what I&apos;m willing to hustle to get. 
                       .
                     </p>
 
