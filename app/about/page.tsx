@@ -18,7 +18,7 @@ import { list } from "postcss";
 export default function BlogPage() {
   return (
     <>
-      <div className="sm:px-8 mb-16 py-12 sm:mt-32">
+      <div className="sm:px-8 py-12 pb-12">
         <div className="mx-auto w-full container px-6 lg:px-8">
           <div className="relative px-4 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -42,20 +42,18 @@ export default function BlogPage() {
                     👋, I’m Parth Bhatt.
                   </h1>
                   <h2 className="text-xl font-bold tracking-tight mt-6 text-zinc-800 dark:text-zinc-100 sm:text-2xl">
-                    I live in Edmonton City, where I code for the future.
+                    I live in Edmonton City, where I code for the  future.
                   </h2>
                   <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                     <p>
-                      I’ve loved making things for as long as I can remember,
-                      and wrote my first program when I was 6 years old, just
-                      two weeks after my mom brought home the brand new
-                      Macintosh LC 550 that I taught myself to type on.
+                      I’ve always envisioned things, be it code, design, decisions, emotions, for as long as I can remember. This website is just another definition of what I have an ability for matched with what I'm willing to hustle to get. 
+                      .
                     </p>
 
                     <p>
                       Today, I’m the co-founder of GoSavis, where we’re
                       tailoring a way for you to connect with your favorites and
-                      also all businesses.
+                      also all businesses. 2 meticulously crafted products are moving your way designed to entirely re-think how services get to you!
                     </p>
                     <p>
                       I’ve worked on tons of little projects over the years but
@@ -101,7 +99,7 @@ export default function BlogPage() {
                     color="foreground"
                     aria-label="Twitter"
                       isExternal
-                      href={siteConfig.links.twitter}
+                      href={siteConfig.links.github}
                       showAnchorIcon
                     >
                       <svg
@@ -128,7 +126,7 @@ export default function BlogPage() {
                     color="foreground"
                     aria-label="Twitter"
                       isExternal
-                      href={siteConfig.links.twitter}
+                      href={siteConfig.links.linkedln}
                       showAnchorIcon
                     >
                        <svg
@@ -152,8 +150,8 @@ export default function BlogPage() {
                     className="hover:text-blue-600"
                     color="foreground"
                     aria-label="Twitter"
-                      isExternal
-                      href={siteConfig.links.twitter}
+                      isDisabled
+                      href="#"
                       
                     >
                       <svg

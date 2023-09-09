@@ -47,22 +47,27 @@ export default function Home() {
 
   return (
     <>
-      <section className="container px-2 lg:px-6  flex flex-col items-center justify-center  py-16 ">
+      <section className="container px-2 lg:px-6  flex flex-col items-center justify-center  py-16 mb-12 ">
 
         <div className="z-10 w-full items-center justify-center max-w-4xl py-6 pb-16 px-5 xl:px-0">
-        <h1 className="animate-fade-up  bg-clip-text text-center font-display text-4xl font-bold  drop-shadow-sm md:text-6xl md:leading-[5rem]">Building blocks for your Next Project</h1>
-        <p className="mt-6  text-center text-default-500 m"> An opinionated collection of code, webhooks, and resources for your web project.</p>
-        <div className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 ">
-        <Button className="mt-16 " color="default" variant="bordered">
+        <h1 className="animate-fade-up  text-center  text-4xl font-bold  drop-shadow-sm md:text-6xl">Shaping the digital future, one code at a time.</h1>
+        <p className="mt-6  text-center text-default-500 m"> Forging the Digital Frontier, One Line of Code at a Time – Where Innovation Meets Excellence.</p>
+        <div className="mx-auto mt-4 flex animate-fade-up items-center justify-center space-x-5 ">
+        <Button className="mt-16 " color="default" variant="ghost">
             <Link isExternal href={siteConfig.links.github} color="foreground" aria-label="Github">
-            <GithubIcon className="text-default-500 mr-2" /> Star on Github
+            <GithubIcon className="text-default-500 mr-2" /> Check Github repos
           </Link>
       </Button>
-      <Button className="mt-16 " color="primary" variant="flat">
-            
-            Let&apos;s chat
-          
-      </Button>
+      <Button
+       isExternal
+      href={siteConfig.links.twitter}
+      as={Link}
+      className="mt-16 " color="danger" variant="shadow"
+    >
+        Grab a Coffee ☕
+    </Button>
+             
+     
 
         </div>
        
@@ -70,7 +75,8 @@ export default function Home() {
         
 
 
-        <div className="container py-6 px-6 grid grid-cols-12 mx-auto w-full gap-6">
+        <div className="container py-12 px-6 grid grid-cols-12 mx-auto w-full gap-6">
+          {/* bio-card */}
           <Card shadow="lg" className="col-span-12 p-4 sm:col-span-8">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
@@ -92,19 +98,18 @@ export default function Home() {
                 </div>
               </div>
               <Button
-                className={
-                  isFollowed
-                    ? "bg-transparent text-foreground border-default-200"
-                    : ""
-                }
-                color="primary"
+               isExternal
+      href={siteConfig.links.twitter}
+      as={Link}
+      color="primary"
                 radius="full"
-                size="sm"
-                variant={isFollowed ? "bordered" : "solid"}
-                onPress={() => setIsFollowed(!isFollowed)}
-              >
-                {isFollowed ? "Unfollow" : "Follow"}
-              </Button>
+                size="md"
+      
+      variant="ghost"
+    >
+      Follow
+    </Button>
+              
             </CardHeader>
 
             <Divider className="my-2" />
@@ -179,7 +184,7 @@ export default function Home() {
                 size="sm"
                 color="secondary"
               >
-                codewithBantsy 💻
+                onairBantsy 🎙️
               </Snippet>
               <Snippet
                 className="text-purple-400 font-semibold  text-tiny "
@@ -189,10 +194,11 @@ export default function Home() {
                 size="sm"
                 color="secondary"
               >
-                codewithBantsy 💻
+                parthb.io 🚀
               </Snippet>
             </CardFooter>
           </Card>
+          {/* resume-card */}
           <Card
             isFooterBlurred
             shadow="lg"
@@ -325,18 +331,19 @@ export default function Home() {
               <Button
                 // href="https://docs.google.com/document/d/1L8xBEcyQcA0kBVaIT4wzzeqeyO9zXk7WeTDBUyzFytE/edit?usp=sharing"
                 as={Link}
-                color="default"
+                color="danger"
                 showAnchorIcon
-                variant="bordered"
+                variant="ghost"
                 onClick={saveFile}
               >
-                Download Cv
+                Download Resume
               </Button>
             </CardFooter>
           </Card>
         </div>
 
         <div className="container py-6 px-6 grid grid-cols-12 mx-auto w-full gap-6">
+          {/* card-1 */}
           <Card
             isFooterBlurred
             shadow="lg"
@@ -431,14 +438,15 @@ export default function Home() {
             </CardHeader>
             <Divider />
             <CardBody>
-              <div className="flex flex-wrap mb-2 py-1 px-4 items-center justify-between  rounded-md">
+              <div className="flex flex-wrap overflow-hidden mb-2 py-1 px-4 items-center justify-between  rounded-md">
                 <div className="w-auto p-2">
                   <div className="flex flex-wrap items-center -m-1.5">
                     <div className="w-auto p-1.5 border-l border-purple-500 ">
                       <Link
+                      isExternal
                         color="success"
                         className="mb-1 text-sm md:text-md ml-2"
-                        href="https://www.fiverr.com/s/b3VgoP"
+                        href={siteConfig.links.fiverr}
                         underline="always"
                       >
                         I will create custom business websites with godaddy

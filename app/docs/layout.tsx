@@ -4,7 +4,7 @@ export default function ProjectsLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<section className="flex flex-col container gap-4 py-8 md:py-10">
+		<section className="flex flex-col container gap-4 py-8 lg:py-10">
 			
 				{children}
 			</section>

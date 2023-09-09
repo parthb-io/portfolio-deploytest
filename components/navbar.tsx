@@ -67,7 +67,7 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        <Chip className="hidden md:flex lg:flex ml-2 w-full" size="sm"  color="success" variant="flat"> <Link className="text-tiny " href="#" underline="focus" color="success" size="lg">Open To Work 🚀</Link></Chip>
+        <Chip className="hidden md:flex lg:flex ml-2 w-full" size="sm"  color="success" variant="flat"> <Link isExternal className="text-tiny " href={siteConfig.links.linkedln} underline="focus" color="success" size="lg">Open To Work 🚀</Link></Chip>
        
       </NavbarContent>
 

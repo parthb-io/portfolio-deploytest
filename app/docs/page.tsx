@@ -16,7 +16,7 @@ import {
 export default function AboutPage() {
   return (
     <>
-      <section className="mx-auto max-w-[1960px] p-4 py-12 ">
+      <section className="mx-auto max-w-[1960px] p-4 py-6 pb-16 ">
         <div className="grid grid-cols-1 py-4 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           <div className="after:content relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-black px-6 pb-16 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0">
             <div className="absolute inset-0 flex items-center justify-center opacity-20">
@@ -223,20 +223,23 @@ export default function AboutPage() {
               alt="Card background"
               className="z-0 w-full  object-cover"
               height={300}
-              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              src="p1-yellow.png"
               width={300}
             />
             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Available soon.</p>
-              <Button
-                className="text-tiny text-white bg-black/20"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                Notify me
-              </Button>
+            <p className="text-tiny text-default-500">More details available soon.</p>
+            <Button
+            radius="lg"
+      href="https://github.com/nextui-org/nextui"
+      as={Link}
+      color="danger"
+      showAnchorIcon
+      variant="shadow"
+      size="sm"
+    >
+      Visit
+    </Button>
+              
             </CardFooter>
           </Card>
           {/* project-2 */}
@@ -252,20 +255,23 @@ export default function AboutPage() {
               alt="Card background"
               className="z-0 w-full  object-cover"
               height={300}
-              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+             
+              src="bantsyai-p5.png"
               width={300}
             />
             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Available soon.</p>
-              <Button
-                className="text-tiny text-white bg-black/20"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                Notify me
-              </Button>
+            <p className="text-tiny text-default-500">More details available soon.</p>
+            <Button
+            radius="lg"
+      href="https://github.com/nextui-org/nextui"
+      as={Link}
+      color="danger"
+      showAnchorIcon
+      variant="shadow"
+      size="sm"
+    >
+      Visit
+    </Button>
             </CardFooter>
           </Card>
           {/* project-3 */}
@@ -281,20 +287,22 @@ export default function AboutPage() {
               alt="Card background"
               className="z-0 w-full  object-cover"
               height={300}
-              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              src="parthb.io-p3.png"
               width={300}
             />
             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Available soon.</p>
-              <Button
-                className="text-tiny text-white bg-black/20"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                Notify me
-              </Button>
+            <p className="text-tiny text-default-500">More details available soon.</p>
+            <Button
+            radius="lg"
+      href="https://github.com/nextui-org/nextui"
+      as={Link}
+      color="danger"
+      showAnchorIcon
+      variant="shadow"
+      size="sm"
+    >
+      Visit
+    </Button>
             </CardFooter>
           </Card>
           {/* project-4 */}
@@ -310,20 +318,23 @@ export default function AboutPage() {
               alt="Card background"
               className="z-0 w-full  object-cover"
               height={300}
-              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              src="weatherai-p4.png"
+              
               width={300}
             />
             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Available soon.</p>
-              <Button
-                className="text-tiny text-white bg-black/20"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                Notify me
-              </Button>
+            <p className="text-tiny text-default-500">More details available soon.</p>
+            <Button
+            radius="lg"
+      href="https://github.com/nextui-org/nextui"
+      as={Link}
+      color="danger"
+      showAnchorIcon
+      variant="shadow"
+      size="sm"
+    >
+      Visit
+    </Button>
             </CardFooter>
           </Card>
           {/* project-5 */}
@@ -339,24 +350,26 @@ export default function AboutPage() {
               alt="Card background"
               className="z-0 w-full  object-cover"
               height={300}
-              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              src="aaalm-p2.png"
               width={300}
             />
             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Available soon.</p>
+              <p className="text-tiny text-default-500">More details available soon.</p>
               <Button
-                className="text-tiny text-white bg-black/20"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                Notify me
-              </Button>
+            radius="lg"
+      href="https://github.com/nextui-org/nextui"
+      as={Link}
+      color="danger"
+      showAnchorIcon
+      variant="shadow"
+      size="sm"
+    >
+      Visit
+    </Button>
             </CardFooter>
           </Card>
           {/* project-6 */}
-          <Card isFooterBlurred radius="lg" className="border-none">
+          {/* <Card isFooterBlurred radius="lg" className="border-none">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
                 1
@@ -383,9 +396,9 @@ export default function AboutPage() {
                 Notify me
               </Button>
             </CardFooter>
-          </Card>
+          </Card> */}
           {/* project-7 */}
-          <Card isFooterBlurred radius="lg" className="border-none">
+          {/* <Card isFooterBlurred radius="lg" className="border-none">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
                 1
@@ -412,7 +425,7 @@ export default function AboutPage() {
                 Notify me
               </Button>
             </CardFooter>
-          </Card>
+          </Card> */}
         </div>
       </section>
     </>

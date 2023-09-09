@@ -86,8 +86,8 @@ export const siteConfig = {
 	// ],
 	links: {
 		github: "https://github.com/parthb-io",
-		twitter: "",
-		docs: "",
+		twitter: "https://twitter.com/parthb_io",
+		linkedln: "https://www.linkedin.com/in/parthb-io/",
 		discord: "",
     sponsor: "",
 	fiverr:"https://www.fiverr.com/parthb_io",
