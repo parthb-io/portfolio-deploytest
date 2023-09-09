@@ -1,491 +1,420 @@
 "use client";
-import React from "react";
-
+import { GithubIcon } from "@/components/icons";
 import { title } from "@/components/primitives";
+import { siteConfig } from "@/config/site";
 
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
   Button,
+  Card,
+  CardFooter,
+  CardHeader,
   Divider,
-  Avatar,
+  Image,
   Link,
 } from "@nextui-org/react";
-import { Tabs, Tab, Chip } from "@nextui-org/react";
 
-export default function DocsPage() {
-  // project-list
-  const list = [
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Orange",
-
-      img: "https://images.unsplash.com/photo-1616469832301-ffaeadc68cf3?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwxfHx3b3JkcHJlc3N8ZW58MHx8fHwxNjkyNTc2MDI0fDA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920",
-      url: "$5.50",
-    },
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Tangerine",
-      img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwzMXx8dHJhdmVsJTIwd2Vic2l0ZXxlbnwwfHx8fDE2OTI1NzYzMDJ8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920",
-      url: "$3.00",
-    },
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Raspberry",
-      img: "/images/fruit-3.jpeg",
-      url: "$10.00",
-    },
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Lemon",
-      img: "/images/fruit-4.jpeg",
-      url: "$5.30",
-    },
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Avocado",
-      img: "/images/fruit-5.jpeg",
-      url: "$15.70",
-    },
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Lemon 2",
-      img: "/images/fruit-6.jpeg",
-      url: "$8.00",
-    },
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Banana",
-      img: "/images/fruit-7.jpeg",
-      url: "$7.50",
-    },
-    {
-      logo: "/favicon.ico",
-      subtitle: "teest1",
-      title: "Watermelon",
-      img: "/images/fruit-8.jpeg",
-      url: "$12.20",
-    },
-  ];
-
-  // services-list
-  const services = [
-    {
-      platform: "/favicon.ico",
-      subtitle: "teest1",
-      listing: "Orange",
-
-      thumbnail:
-        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwyOHx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8fHwxNjkyNTc1NzgxfDA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920",
-      price: "$5.50",
-    },
-    {
-      platform: "/favicon.ico",
-      subtitle: "teest1",
-      listing: "Orange",
-
-      thumbnail: "/images/fruit-1.jpeg",
-      price: "$5.50",
-    },
-    {
-      platform: "/favicon.ico",
-      subtitle: "teest1",
-      listing: "Orange",
-
-      thumbnail: "/images/fruit-1.jpeg",
-      price: "$5.50",
-    },
-    {
-      platform: "/favicon.ico",
-      subtitle: "teest1",
-      listing: "Orange",
-
-      thumbnail: "/images/fruit-1.jpeg",
-      price: "$5.50",
-    },
-    {
-      platform: "/favicon.ico",
-      subtitle: "teest1",
-      listing: "Orange",
-
-      thumbnail: "/images/fruit-1.jpeg",
-      price: "$5.50",
-    },
-  ];
-  const [isFollowed, setIsFollowed] = React.useState(false);
-
+export default function AboutPage() {
   return (
-    <section className="container px-2 md:px-10 lg:px-16 flex flex-col items-center justify-center gap-4 py-4 ">
-      <div className="container mx-auto w-full px-2 md:px-16 lg:px-12   pb-20 ">
-        {/* hero-section */}
-        <div className="mb-8 px-8  overflow-hidden  pb-8 font-mono">
-          <h1 className={title()}>{""} Things I’ve made trying to put my </h1>
-
-          <h1 className={title({ class: "mt-2  text-emerald-500" })}>
-            {""} dent in the universe.{""}{" "}
-          </h1>
-
-          {/* <p className="font-medium mt-8 leading-normal ">
-            I’ve worked on tons of little projects over the years but these are
-            the ones that I’m most proud of. Many of them are open-source, so if
-            you see something that piques your interest, check out the code and
-            contribute if you have ideas for how it can be improved.
-          </p> */}
-
-          {/* <div className="mb-4 mt-8 flex flex-wrap gap-3">
-            <a
-              className="group  -m-1 p-1"
-              aria-label="Follow on GitHub"
-              href="https://github.com"
-            >
-              #FullStackDeveloper
-            </a>
-            <a
-              className="group -m-1 p-1"
-              aria-label="Follow on Twitter"
-              href="https://twitter.com"
-            >
-              #FullStackDeveloper
-            </a>
-            <a
-              className="group -m-1 p-1"
-              aria-label="Follow on Twitter"
-              href="https://twitter.com"
-            >
-              #FullStackDeveloper
-            </a>
-          </div> */}
-        </div>
-        <Divider className="px-8" />
-
-        {/* card-section */}
-        <div className="container mx-auto w-full gap-6 grid grid-cols-12 py-16 grid-rows-2 px-8">
-          {/* Card-1 */}
-          <Card shadow="lg" className="col-span-12  sm:col-span-6 ">
-            <CardHeader className="flex gap-3">
-              <Image
-                alt="nextui logo"
-                height={40}
-                radius="sm"
-                src="/profile-logo.svg"
-                width={40}
-              />
-              <div className="flex flex-col">
-                <p className="text-md">NextUI</p>
-                <p className="text-small text-default-500">nextui.org</p>
-              </div>
-            </CardHeader>
-            <Divider />
-            <CardBody>
-              <p>
-                I’ve worked on tons of little projects over the years but these
-                are the ones that I’m most proud of. Many of them are
-                open-source, so if you see something that piques your interest,
-                check out the code and contribute if you have ideas for how it
-                can be improved.
-              </p>
-            </CardBody>
-            <Divider />
-            <CardFooter>
-              <Link
-                isExternal
-                showAnchorIcon
-                href="https://github.com/nextui-org/nextui"
-              >
-                Visit source code on GitHub.
-              </Link>
-            </CardFooter>
-          </Card>
-          {/* Cards 2&3 */}
-          <div className="col-span-12 sm:col-span-6 flex flex-col mx-auto w-full gap-8">
-            <Card shadow="lg" className="overflow-hidden p-4 relative ">
-              <CardHeader className="justify-between">
-                <div className="flex gap-5 ">
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    src="/profile-logo.svg"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="primary"
-                    src="https://i.pravatar.cc/150?u=a04258a2462d826712d"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="secondary"
-                    src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="success"
-                    src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="warning"
-                    src="https://i.pravatar.cc/150?u=a04258114e29026702d"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="danger"
-                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="danger"
-                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
-                    className="hidden  lg:flex md:flex"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="danger"
-                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
-                    className="hidden  lg:flex md:flex"
-                  />
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    color="danger"
-                    src="https://i.pravatar.cc/150?u=a04258114e29026708c"
-                    className="hidden  lg:flex md:flex"
-                  />
-                  {/* <div className="flex flex-col gap-1 items-start justify-center">
-                    <h4 className="text-small font-semibold leading-none text-default-600">
-                      Zoey Lang
-                    </h4>
-                    <h5 className="text-small tracking-tight text-default-400">
-                      @zoeylang
-                    </h5>
-                  </div> */}
-                </div>
-                
-              </CardHeader>
-            </Card>
-            <Card shadow="lg" className="overflow-hidden p-4 relative ">
-              <CardHeader className="justify-between">
-                <div className="flex gap-5">
-                  <Avatar
-                    isBordered
-                    radius="full"
-                    size="md"
-                    src="/avatars/avatar-1.png"
-                  />
-                  <div className="flex flex-col gap-1 items-start justify-center">
-                    <h4 className="text-small font-semibold leading-none text-default-600">
-                      Zoey Lang
-                    </h4>
-                    <h5 className="text-small tracking-tight text-default-400">
-                      @zoeylang
-                    </h5>
-                  </div>
-                </div>
-                <Button
-                  className={
-                    isFollowed
-                      ? "bg-transparent text-foreground border-default-200"
-                      : ""
-                  }
-                  color="primary"
-                  radius="full"
-                  size="sm"
-                  variant={isFollowed ? "bordered" : "solid"}
-                  onPress={() => setIsFollowed(!isFollowed)}
+    <>
+      <section className="mx-auto max-w-[1960px] p-4 py-12 ">
+        <div className="grid grid-cols-1 py-4 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+          <div className="after:content relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-black px-6 pb-16 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0">
+            <div className="absolute inset-0 flex items-center justify-center opacity-20">
+              <span className="flex max-h-full max-w-full items-center justify-center">
+                <svg
+                  aria-labelledby="conf-city-title"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 620 704"
+                  width="620"
+                  height="704"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  {isFollowed ? "Unfollow" : "Follow"}
-                </Button>
-              </CardHeader>
-              <Divider className="my-4" />
-              <CardBody className="px-3 overflow-hidden py-0 text-small text-default-400">
-                <p>
-                  Frontend developer and UI/UX enthusiast. Join me on this
-                  coding adventure!
-                </p>
-                <span className="pt-2">
-                  #FrontendWithZoey
-                  <span className="py-2" aria-label="computer" role="img">
-                    💻
-                  </span>
-                </span>
-              </CardBody>
-              <CardFooter className="gap-3">
-                <div className="flex gap-1">
-                  <p className="font-semibold text-default-400 text-small">4</p>
-                  <p className=" text-default-400 text-small">Following</p>
-                </div>
-                <div className="flex gap-1">
-                  <p className="font-semibold text-default-400 text-small">
-                    97.1K
-                  </p>
-                  <p className="text-default-400 text-small">Followers</p>
-                </div>
-              </CardFooter>
-            </Card>
+                  <title id="conf-city-title">
+                    Line drawing of the Golden Gate Bridge in San Francisco.
+                  </title>
+                  <path d="M372.5 299.5L616.5 335" stroke="currentColor"></path>
+                  <path
+                    d="M370 16.5C429.833 101.833 562.9 284 616.5 330"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M329.5 34.5L325 36L322 38C321.333 38.5 320 39.6 320 40C320 40.4 319.333 41.1667 319 41.5L318.5 45.5V72L322.5 73M329.5 34.5C336.667 34 351.1 33 351.5 33C351.9 33 354 33.3333 355 33.5L356.5 34.5L358 36L358.5 38L358 70L357.5 70.5L354 72L350.5 73.5H330L322.5 73M329.5 34.5L324.5 38L323.5 40.5L322.5 43.5V73"
+                    stroke="currentColor"
+                  ></path>
+                  <path d="M321 315V397H356.5" stroke="currentColor"></path>
+                  <path
+                    d="M332 234L329 240L328 241V245H327V251H326.5V261.5L325.5 262V289.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M-0.5 158.5L27 171.5L43.5 190L48.5 202L85 218.5L95.5 246.5C98.1667 254.333 103.7 270.6 104.5 273C105.5 276 117 291 119 294.5C121 298 125.5 307 127 310C128.5 313 142 324.5 145 328C147.4 330.8 154.333 338.833 157.5 342.5L164 358C167.5 362 174.9 370.5 176.5 372.5C178.5 375 191 386.5 193.5 390C196 393.5 200.5 403 202 405.5C203.2 407.5 205.5 415 206.5 418.5C207.833 422.833 210.7 432 211.5 434C212.3 436 216.833 451.5 219 459C221.333 464.5 226 476.6 226 481C226 486.5 223.5 497.5 223.5 500C223.5 502.5 222 503 230.5 512.5C239 522 245.5 529.5 247 532C248.2 534 255.5 546.5 259 552.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M164 357.5L206 353L237.5 345.5C242.667 345.5 254.5 345.5 260.5 345.5C268 345.5 277.5 342 279.5 341C281.1 340.2 289.5 337 293.5 335.5H305H309.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M309.5 314V399.5L306 402V411.5L303 414.5V433H262.5V440.5H420.5V433H381.5L380 416.5H375.5V402L373 400.5L372 184.5L370 15H371V11L369.5 10.5L366 6V3L364.5 1L363.5 2.5L363 6C308.667 47.5 163.6 137.8 18 167"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M352.5 14C347.333 14.6667 334.3 15.8 323.5 15C321.9 12.6 320.5 11 320 10.5V6L318.5 4.5L316.5 6V10C276.667 42 158 116.7 2 159.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M313 14V69.5L311.5 71.5V131.5L310 133V207L309 208.5V287"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M321 288.5V261.5H323V250.5H324.5V244H325.5V241L329.5 234.5L334.5 233.5H351L352 237.5L353.5 238.5L354 243L355 244.5V249L355.5 250.5L356 259.5V292.5L355.5 328.5L356.5 330.5V334V397.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M214 440.5H262.5M420.5 440.5H622"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M404 475L427.059 474L453 475"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M585 454L594.882 453L606 454"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M543 450L552.882 449L564 450"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M339 511.5L379.5 508L424 511.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M339 577L393.318 573L453 577"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M453 703L547.818 695L652 703"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M460 536L505.741 533L556 536"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M508 467L531.347 465L557 467"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M315 455L338.347 453L364 455"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M449 453L464.247 451L481 453"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M252 487L275.347 484L301 487"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M277.5 552.5L209.5 550L109.5 571L46 584.5L9.5 604H-22"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M355.5 318.5L117.5 293M113 286.5L355.5 313.5M373 315L616.5 346.5M373 321L567.5 346.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M100.5 262L356 293M372.5 295L616 331.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M372.5 330L388 328.5L401.5 329.5L411 328.5C413.167 328.5 417.6 328.5 418 328.5C418.4 328.5 423.833 328.167 426.5 328"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M513 440.5V433H568M568 433V346.5H616.5V320H622M568 433H622M591 433V364.5H595.5M604.5 433V364.5H595.5M595.5 364.5V433"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M323 165.5V208L328 209C334.5 209.167 347.6 209.4 348 209C348.4 208.6 350.833 208.5 352 208.5L356.5 204.5V199.5L356 198.5V195.5L357 195V170L355.5 168.5V164.5L355 163V160.5L351.5 156.5H331.5L329 159L326.5 159.5L325.5 161.5L324 162.5V165L323 165.5Z"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M329 159L327.5 162.5V166L326 166.5V171.5L325.5 172.5L326 208.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M333.5 92.5L326 93.5L324 95L322.5 96V98V100.5H321V103L319.5 104.5V132L324 134M333.5 92.5H354.5L357 95V97.5L357.5 99V129L356.5 130L356 132L353 133L349.5 134H324M333.5 92.5L327 94.5L326 97L325.5 101.5L324.5 102.5V105.5L324 107V134"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M371 87C472.6 225.4 545 303 568.5 324.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M334.5 34C339 41.1667 350 58.2 358 69"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M326 315.5L334.5 324V329.5L321.5 346M335.5 316.5L340 322L344 317.5M351.5 318L346 324V329.5L356.5 342M340 332.5L328 347.5H352.5L340 332.5Z"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M321 390L334.5 377L334.5 371.5L321 354.5M322 397L340 379L354.5 397M356.5 390L346 377L346 371.5L356.5 359.5M340 368.5L328 353.5L352.5 353.5L340 368.5Z"
+                    stroke="currentColor"
+                  ></path>
+                  <path d="M325.5 315.5V341" stroke="currentColor"></path>
+                  <path d="M325.5 360V385.5" stroke="currentColor"></path>
+                  <path
+                    d="M355.5 310.5L123 283.5V270L356 297.5"
+                    stroke="currentColor"
+                  ></path>
+                  <path d="M372.5 311.5L616.5 344" stroke="currentColor"></path>
+                  <path d="M86.5 149V222" stroke="currentColor"></path>
+                  <path d="M122 137V265" stroke="currentColor"></path>
+                  <path d="M155 124V268" stroke="currentColor"></path>
+                  <path d="M188 109L188 273" stroke="currentColor"></path>
+                  <path d="M220 93L220 276.5" stroke="currentColor"></path>
+                  <path d="M251 77L251 280" stroke="currentColor"></path>
+                  <path d="M281 60L281 284" stroke="currentColor"></path>
+                  <path d="M391 46L391 298" stroke="currentColor"></path>
+                  <path d="M417 82L417 302" stroke="currentColor"></path>
+                  <path d="M441 115L441 305" stroke="currentColor"></path>
+                  <path d="M465 147L465 309" stroke="currentColor"></path>
+                  <path d="M488 178L488 312" stroke="currentColor"></path>
+                  <path d="M511 208L511 316" stroke="currentColor"></path>
+                  <path d="M532 235L532 319" stroke="currentColor"></path>
+                  <path d="M553 261L553 322" stroke="currentColor"></path>
+                  <path d="M571 282L571 325" stroke="currentColor"></path>
+                </svg>
+              </span>
+              <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
+            </div>
+            
+            <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest">
+              2023 Project Gallery
+            </h1>
+            <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
+              Things I’ve made trying to put my dent in the universe!
+            </p>
+            {/* star-on-github */}
+            <Button className="mt-16" color="success" variant="flat">
+            <Link isExternal href={siteConfig.links.github} color="success" aria-label="Github">
+            <GithubIcon className="text-default-500 mr-2" /> Star on Github
+          </Link>
+      </Button>
+            
+          
           </div>
-          {/* Card 4  */}
-          <Card
-            shadow="lg"
-            isFooterBlurred
-            className="w-full h-[300px] col-span-12 sm:col-span-4"
-          >
+          {/* project-1 */}
+          <Card isFooterBlurred radius="lg" className="border-none">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <h1 className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
+              <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
                 1
               </h1>
             </CardHeader>
-           
+
             <Image
               removeWrapper
               alt="Card background"
-              height={380}
-              className="z-0 w-full h-[380px] object-cover"
+              className="z-0 w-full  object-cover"
+              height={300}
               src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              width={300}
             />
-            <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              <div>
-                <p className="text-black text-tiny">Available soon.</p>
-                <p className="text-black text-tiny">Get notified.</p>
-              </div>
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <p className="text-tiny text-white/80">Available soon.</p>
               <Button
-                className="text-tiny"
-                color="primary"
-                radius="full"
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
                 size="sm"
               >
-                Notify Me
+                Notify me
               </Button>
             </CardFooter>
           </Card>
-
-          {/* Card 5  */}
-          <Card
-            shadow="lg"
-            isFooterBlurred
-            className="w-full h-[300px] col-span-12 sm:col-span-4"
-          >
+          {/* project-2 */}
+          <Card isFooterBlurred radius="lg" className="border-none">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <h1 className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
-                2
+              <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
+                1
               </h1>
             </CardHeader>
+
             <Image
               removeWrapper
               alt="Card background"
-              height={380}
-              className="z-0 w-full h-[380px] object-cover"
-              src="https://images.unsplash.com/photo-1635656731280-293c96c2ebb8?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwyMHx8cG9ydGZvbGlvfGVufDB8Mnx8fDE2OTM0MzIxNjd8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              className="z-0 w-full  object-cover"
+              height={300}
+              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              width={300}
             />
-            <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              <div>
-                <p className="text-black text-tiny">Available soon.</p>
-                <p className="text-black text-tiny">Get notified.</p>
-              </div>
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <p className="text-tiny text-white/80">Available soon.</p>
               <Button
-                className="text-tiny"
-                color="primary"
-                radius="full"
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
                 size="sm"
               >
-                Notify Me
+                Notify me
               </Button>
             </CardFooter>
           </Card>
-
-          {/* card-6 */}
-          <Card
-            shadow="lg"
-            isFooterBlurred
-            className="w-full h-[300px] col-span-12 sm:col-span-4"
-          >
+          {/* project-3 */}
+          <Card isFooterBlurred radius="lg" className="border-none">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <h1 className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
-                3
+              <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
+                1
               </h1>
             </CardHeader>
+
             <Image
               removeWrapper
               alt="Card background"
-              height={380}
-              className="z-0 w-full h-[380px] object-cover"
-              src="https://images.unsplash.com/photo-1436397543931-01c4a5162bdb?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwzM3x8cG9ydGZvbGlvfGVufDB8Mnx8fDE2OTM0MzIxOTl8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              className="z-0 w-full  object-cover"
+              height={300}
+              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              width={300}
             />
-            <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              <div>
-                <p className="text-black text-tiny">Available soon.</p>
-                <p className="text-black text-tiny">Get notified.</p>
-              </div>
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <p className="text-tiny text-white/80">Available soon.</p>
               <Button
-                className="text-tiny"
-                color="primary"
-                radius="full"
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
                 size="sm"
               >
-                Notify Me
+                Notify me
               </Button>
             </CardFooter>
           </Card>
-
-          {/* card-7 */}
-          <Card
-            shadow="lg"
-            isFooterBlurred
-            className="w-full h-[300px] col-span-12 sm:col-span-4"
-          >
+          {/* project-4 */}
+          <Card isFooterBlurred radius="lg" className="border-none">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-lg border rounded-full p-2 text-white/60 uppercase font-bold">
-                4
-              </p>
+              <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
+                1
+              </h1>
             </CardHeader>
+
             <Image
               removeWrapper
               alt="Card background"
-              height={380}
-              className="z-0 w-full h-[380px] object-cover"
-              src="https://images.unsplash.com/photo-1633876841461-772d2b0b0e39?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHwxN3x8cG9ydGZvbGlvfGVufDB8Mnx8fDE2OTM0MzIxNjd8MA&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              className="z-0 w-full  object-cover"
+              height={300}
+              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              width={300}
             />
-            <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              <div>
-                <p className="text-black text-tiny">Available soon.</p>
-                <p className="text-black text-tiny">Get notified.</p>
-              </div>
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <p className="text-tiny text-white/80">Available soon.</p>
               <Button
-                className="text-tiny"
-                color="primary"
-                radius="full"
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
                 size="sm"
               >
-                Notify Me
+                Notify me
+              </Button>
+            </CardFooter>
+          </Card>
+          {/* project-5 */}
+          <Card isFooterBlurred radius="lg" className="border-none">
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
+                1
+              </h1>
+            </CardHeader>
+
+            <Image
+              removeWrapper
+              alt="Card background"
+              className="z-0 w-full  object-cover"
+              height={300}
+              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              width={300}
+            />
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <p className="text-tiny text-white/80">Available soon.</p>
+              <Button
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
+                size="sm"
+              >
+                Notify me
+              </Button>
+            </CardFooter>
+          </Card>
+          {/* project-6 */}
+          <Card isFooterBlurred radius="lg" className="border-none">
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
+                1
+              </h1>
+            </CardHeader>
+
+            <Image
+              removeWrapper
+              alt="Card background"
+              className="z-0 w-full  object-cover"
+              height={300}
+              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              width={300}
+            />
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <p className="text-tiny text-white/80">Available soon.</p>
+              <Button
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
+                size="sm"
+              >
+                Notify me
+              </Button>
+            </CardFooter>
+          </Card>
+          {/* project-7 */}
+          <Card isFooterBlurred radius="lg" className="border-none">
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <h1 className="text-lg border rounded-full p-2 text-default-600 uppercase font-bold">
+                1
+              </h1>
+            </CardHeader>
+
+            <Image
+              removeWrapper
+              alt="Card background"
+              className="z-0 w-full  object-cover"
+              height={300}
+              src="https://images.unsplash.com/photo-1550170618-bd1ec6a9dd2c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHNlYXJjaHw0fHxwb3J0Zm9saW98ZW58MHwyfHx8MTY5MzQzMjE2MHww&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
+              width={300}
+            />
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <p className="text-tiny text-white/80">Available soon.</p>
+              <Button
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
+                size="sm"
+              >
+                Notify me
               </Button>
             </CardFooter>
           </Card>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

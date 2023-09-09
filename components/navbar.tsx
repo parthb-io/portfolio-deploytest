@@ -34,6 +34,7 @@ import {
   DropdownItem,
   DropdownSection,
   User,
+  Chip,
 } from "@nextui-org/react";
 
 export const Navbar = () => {
@@ -66,6 +67,8 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
+        <Chip className="hidden md:flex lg:flex ml-2 w-full" size="sm"  color="success" variant="flat"> <Link className="text-tiny " href="#" underline="focus" color="success" size="lg">Open To Work 🚀</Link></Chip>
+        <Chip className=" md:hidden lg:hidden ml-2 w-full" size="sm"  color="success" variant="flat"> <Link className="text-tiny " href="#" underline="focus" color="success" size="lg">Hire Me 💼</Link></Chip>
       </NavbarContent>
 
       {/* menu-icons-buttons */}
@@ -76,13 +79,13 @@ export const Navbar = () => {
         {/* Menu-icons */}
         <NavbarItem className="hidden sm:flex gap-2">
           {/* twitter-icon */}
-          <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
+          {/* <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
             <TwitterIcon className="text-default-500" />
-          </Link>
+          </Link> */}
           {/* discord-icon */}
-          <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
+          {/* <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
             <DiscordIcon className="text-default-500" />
-          </Link>
+          </Link> */}
           {/* github-icon */}
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon className="text-default-500" />

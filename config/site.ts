@@ -12,14 +12,18 @@ export const siteConfig = {
       label: "Projects",
       href: "/docs",
     },
+	// {
+	// 	label: "Articles",
+	// 	href: "/blog",
+	//   },
+    // {
+    //   label: "Resources",
+    //   href: "/pricing",
+    // },
 	{
-		label: "Articles",
-		href: "/blog",
+		label: "About",
+		href: "/about",
 	  },
-    {
-      label: "Resources",
-      href: "/pricing",
-    },
     
     // {
     //   label: "Whitepaper",
@@ -30,20 +34,20 @@ export const siteConfig = {
 	navMenuItems: [
 		{
 			label: "Profile",
-			href: "/profile",
+			href: "/about",
 		},
 		{
 			label: "Projects",
 			href: "/docs",
 		  },
-		  {
-			label: "Resources",
-			href: "/pricing",
-		  },
-		  {
-			label: "Articles",
-			href: "/blog",
-		  },
+		//   {
+		// 	label: "Resources",
+		// 	href: "/pricing",
+		//   },
+		//   {
+		// 	label: "Articles",
+		// 	href: "/blog",
+		//   },
 		
 	],
 	// navMenuItems: [
