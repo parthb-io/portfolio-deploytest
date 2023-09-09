@@ -48,32 +48,39 @@ export default function Home() {
   return (
     <>
       <section className="container px-2 lg:px-6  flex flex-col items-center justify-center  py-16 mb-12 ">
-
         <div className="z-10 w-full items-center justify-center max-w-4xl py-6 pb-16 px-5 xl:px-0">
-        <h1 className="animate-fade-up  text-center  text-4xl font-bold  drop-shadow-sm md:text-6xl">Shaping the digital future, one code at a time.</h1>
-        <p className="mt-6  text-center text-default-500 m"> Forging the Digital Frontier, One Line of Code at a Time – Where Innovation Meets Excellence.</p>
-        <div className="mx-auto mt-4 flex animate-fade-up items-center justify-center space-x-5 ">
-        <Button className="mt-16 " color="default" variant="ghost">
-            <Link isExternal href={siteConfig.links.github} color="foreground" aria-label="Github">
-            <GithubIcon className="text-default-500 mr-2" /> Check Github repos
-          </Link>
-      </Button>
-      <Button
-       isExternal
-      href={siteConfig.links.twitter}
-      as={Link}
-      className="mt-16 " color="danger" variant="shadow"
-    >
-        Grab a Coffee ☕
-    </Button>
-             
-     
-
+          <h1 className="animate-fade-up  text-center  text-4xl font-bold  drop-shadow-sm md:text-6xl">
+            Shaping the digital future, one code at a time.
+          </h1>
+          <p className="mt-6  text-center text-default-500 m">
+            {" "}
+            Forging the Digital Frontier, One Line of Code at a Time – Where
+            Innovation Meets Excellence.
+          </p>
+          <div className="mx-auto mt-4 flex animate-fade-up items-center justify-center space-x-5 ">
+            <Button className="mt-16 " color="default" variant="ghost">
+              <Link
+                isExternal
+                href={siteConfig.links.github}
+                color="foreground"
+                aria-label="Github"
+              >
+                <GithubIcon className="text-default-500 mr-2" /> Check Github
+                repos
+              </Link>
+            </Button>
+            <Button
+              isExternal
+              href={siteConfig.links.twitter}
+              as={Link}
+              className="mt-16 "
+              color="danger"
+              variant="shadow"
+            >
+              Grab a Coffee ☕
+            </Button>
+          </div>
         </div>
-       
-        </div>
-        
-
 
         <div className="container py-12 px-6 grid grid-cols-12 mx-auto w-full gap-6">
           {/* bio-card */}
@@ -93,23 +100,21 @@ export default function Home() {
                     Parth Bhatt
                   </h4>
                   <h5 className="text-tiny md:text-sm lg:text-sm tracking-tight  mr-4 text-default-500">
-                    @parthb.io 
+                    @parthb.io
                   </h5>
                 </div>
               </div>
               <Button
-               isExternal
-      href={siteConfig.links.twitter}
-      as={Link}
-      color="primary"
+                isExternal
+                href={siteConfig.links.twitter}
+                as={Link}
+                color="primary"
                 radius="full"
                 size="md"
-      
-      variant="ghost"
-    >
-      Follow
-    </Button>
-              
+                variant="ghost"
+              >
+                Follow
+              </Button>
             </CardHeader>
 
             <Divider className="my-2" />
@@ -443,7 +448,7 @@ export default function Home() {
                   <div className="flex flex-wrap items-center -m-1.5">
                     <div className="w-auto p-1.5 border-l border-purple-500 ">
                       <Link
-                      isExternal
+                        isExternal
                         color="success"
                         className="mb-1 text-sm md:text-md ml-2"
                         href={siteConfig.links.fiverr}
@@ -463,9 +468,10 @@ export default function Home() {
               </div>
               <Divider />
             </CardBody>
-            <CardFooter className="bg-black/10 bottom-0 z-10 border-t-1 border-purple-600
-             dark:border-purple-300">
-              
+            <CardFooter
+              className="bg-black/10 bottom-0 z-10 border-t-1 border-purple-600
+             dark:border-purple-300"
+            >
               <Button
                 href=""
                 as={Link}
@@ -487,7 +493,7 @@ export default function Home() {
             shadow="lg"
             className="col-span-12  sm:col-span-4"
           >
-             <Image
+            <Image
               removeWrapper
               isZoomed
               isBlurred
@@ -499,12 +505,11 @@ export default function Home() {
             />
 
             <CardFooter className="absolute  bottom-0 z-10 ">
-              <p>Feature Loading Soon...</p></CardFooter>
+              <p>Feature Loading Soon...</p>
+            </CardFooter>
           </Card>
           {/* card3 */}
         </div>
-
-        
       </section>
     </>
   );

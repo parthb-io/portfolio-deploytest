@@ -39,25 +39,25 @@ export default function BlogPage() {
                 {/* Intro-text */}
                 <div className="lg:order-first lg:row-span-2">
                   <h1 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-                    👋, I’m Parth Bhatt.
+                    👋, I&apos;m Parth Bhatt.
                   </h1>
                   <h2 className="text-xl font-bold tracking-tight mt-6 text-zinc-800 dark:text-zinc-100 sm:text-2xl">
                     I live in Edmonton City, where I code for the  future.
                   </h2>
                   <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                     <p>
-                      I’ve always envisioned things, be it code, design, decisions, emotions, for as long as I can remember. This website is just another definition of what I have an ability for matched with what I'm willing to hustle to get. 
+                      I&apos;ve always envisioned things, be it code, design, decisions, emotions, for as long as I can remember. This website is just another definition of what I have an ability for matched with what I'm willing to hustle to get. 
                       .
                     </p>
 
                     <p>
-                      Today, I’m the co-founder of GoSavis, where we’re
+                      Today, I&apos;m the co-founder of GoSavis, where we&apos;re
                       tailoring a way for you to connect with your favorites and
                       also all businesses. 2 meticulously crafted products are moving your way designed to entirely re-think how services get to you!
                     </p>
                     <p>
-                      I’ve worked on tons of little projects over the years but
-                      these are the ones that I’m most proud of. Many of them
+                      I&apos;ve worked on tons of little projects over the years but
+                      these are the ones that I&apos;m most proud of. Many of them
                       are open-source, so if you see something that piques your
                       interest, check out the code and contribute if you have
                       ideas for how it can be improved.
