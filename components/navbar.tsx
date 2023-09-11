@@ -67,6 +67,9 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
+        <Link className="hidden lg:flex" isExternal color="foreground" href={siteConfig.links.notion} aria-label="notion">
+            Services
+          </Link>
         <Chip className="hidden md:flex lg:flex ml-2 w-full" size="sm"  color="success" variant="flat"> <Link isExternal className="text-tiny " href={siteConfig.links.linkedln} underline="focus" color="success" size="lg">Open To Work 🚀</Link></Chip>
        
       </NavbarContent>
@@ -272,11 +275,13 @@ export const Navbar = () => {
 
       {/* mobile-menu-navbar */}
       <NavbarMenu>
-        <Link
+        <Link className="mx-4  "
           isExternal
           href="https://www.fiverr.com/parthb_io"
           showAnchorIcon
           color="success"
+
+          size="md"
         >
           Hire On Fiverr
         </Link>
@@ -300,6 +305,10 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
         </div>
+        <Link className="mx-4  " size="md" isExternal  color="warning" href={siteConfig.links.notion} aria-label="notion">
+            Services
+          </Link>
+
       </NavbarMenu>
       
     </NextUINavbar>

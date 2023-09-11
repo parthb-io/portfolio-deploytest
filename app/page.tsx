@@ -67,7 +67,6 @@ export default function Home() {
                 aria-label="Github"
               >
                 <GithubIcon className="text-default-500 mr-2" /> Star Github
-               
               </Link>
             </Button>
             <Button
@@ -121,8 +120,17 @@ export default function Home() {
             <Divider className="my-2 " />
             <CardBody className="px-3 overflow-hidden py-0 text-small text-default-500">
               <p className="py-4  leading-loose">
-              I bring over 2 years of valuable IT experience, currently as an {""}<Chip color="danger" size="sm" variant="dot">Associate Fullstack Developer </Chip>{""}
-                Developer and {""}<Chip color="danger" size="sm" variant="dot">AI enthusiast </Chip> {""} based in Canada
+                I bring over 2 years of valuable IT experience, currently as an{" "}
+                {""}
+                <Chip color="danger" size="sm" variant="dot">
+                  Associate Fullstack Dev 
+                </Chip>
+                {""}
+                 and {""}
+                <Chip color="danger" size="sm" variant="dot">
+                  AI enthusiast{" "}
+                </Chip>{" "}
+                {""} based in Canada
                 <ReactCountryFlag
                   countryCode="CA"
                   svg
@@ -135,7 +143,7 @@ export default function Home() {
                   }}
                   className="mr-2 "
                 />{" "}
-                CA but strongly rooted in Uganda
+                but strongly rooted in Uganda
                 <ReactCountryFlag
                   countryCode="UG"
                   svg
@@ -147,7 +155,8 @@ export default function Home() {
                   }}
                   title="UG"
                   className="mr-2 "
-                />{""}
+                />
+                {""}
                 & India
                 <ReactCountryFlag
                   countryCode="IN"
@@ -164,20 +173,38 @@ export default function Home() {
                 .
               </p>
               <p className="pt-4 leading-loose">
-               My expertise spans a wide array of programming languages, libraries, & frameworks, such as 
-               {""} <Chip color="warning" size="sm" variant="faded">ReactJS</Chip>,
-               {""} <Chip color="warning" size="sm" variant="faded">AngularJS</Chip>,
-               {""} <Chip color="warning" size="sm" variant="faded">GatsbyJS</Chip> & 
-               {""} <Chip color="warning" size="sm" variant="faded">Framer Motion</Chip>,
-                 as well as back-end development with
-                 {""}  <Chip color="warning" size="sm" variant="faded">NodeJS</Chip>  & 
-                 {""} <Chip color="warning" size="sm" variant="faded">Python</Chip>, all implemented on maintaining & enhancing web-based applications through the entire
-                 Software Development Life Cycle (SDLC).
- 
- 
+                My expertise spans a wide array of programming languages,
+                libraries, & frameworks, such as
+                {""}{" "}
+                <Chip color="warning" size="sm" variant="faded">
+                  ReactJS
+                </Chip>
+                ,{""}{" "}
+                <Chip color="warning" size="sm" variant="faded">
+                  AngularJS
+                </Chip>
+                ,{""}{" "}
+                <Chip color="warning" size="sm" variant="faded">
+                  GatsbyJS
+                </Chip>{" "}
+                &{""}{" "}
+                <Chip color="warning" size="sm" variant="faded">
+                  Framer Motion
+                </Chip>
+                , as well as back-end development with
+                {""}{" "}
+                <Chip color="warning" size="sm" variant="faded">
+                  NodeJS
+                </Chip>{" "}
+                &{""}{" "}
+                <Chip color="warning" size="sm" variant="faded">
+                  Python
+                </Chip>
+                , all implemented on maintaining & enhancing web-based
+                applications through the entire Software Development Life Cycle
+                (SDLC).
               </p>
               <p className="py-4">Join me on this coding adventure!</p>
-              
             </CardBody>
 
             <CardFooter className="gap-6 overflow-hidden ">
