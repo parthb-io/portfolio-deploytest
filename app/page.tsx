@@ -82,7 +82,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container py-12 px-6 grid grid-cols-12 mx-auto w-full gap-6">
+        <div className="container pt-12 pb-6 px-10 grid grid-cols-12 mx-auto w-full gap-6">
           {/* bio-card */}
           <Card shadow="lg" className="col-span-12 p-4 sm:col-span-8">
             <CardHeader className="justify-between">
@@ -163,10 +163,11 @@ export default function Home() {
                 .
               </p>
               <p className="py-4">
-                In carefully selected markets and locations🌐, we bring tech and
-                expertise to create or enhance the ecosystem that can transform
-                communities. Join me on this coding adventure!{" "}
+              I bring over 2 years of valuable IT experience focused on maintaining and enhancing web-based applications through the entire Software Development Life Cycle (SDLC).  My expertise spans a wide array of programming languages, libraries, and frameworks, such as React.js, Angular.js, Gatsby.js, and Framer Motion, as well as back-end development with Node.js and Python. 
+ Join me on this coding adventure!
+ 
               </p>
+              
             </CardBody>
 
             <CardFooter className="gap-6 overflow-hidden ">
@@ -347,7 +348,7 @@ export default function Home() {
           </Card>
         </div>
 
-        <div className="container py-6 px-6 grid grid-cols-12 mx-auto w-full gap-6">
+        <div className="container py-6 px-10 grid grid-cols-12 mx-auto w-full gap-6">
           {/* card-1 */}
           <Card
             isFooterBlurred
