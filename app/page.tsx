@@ -20,6 +20,7 @@ import {
   Badge,
   Progress,
   AvatarGroup,
+  Chip,
 } from "@nextui-org/react";
 import { GithubIcon } from "@/components/icons";
 
@@ -47,8 +48,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="container px-2 lg:px-6  flex flex-col items-center justify-center  py-16 mb-12 ">
-        <div className="z-10 w-full items-center justify-center max-w-4xl py-6 pb-16 px-5 xl:px-0">
+      <section className="container px-4   flex flex-col items-center justify-center  py-16 mb-12 ">
+        <div className="z-10 w-full items-center justify-center max-w-4xl py-6 pb-16 px-5 ">
           <h1 className="animate-fade-up  text-center  text-4xl font-bold  drop-shadow-sm md:text-6xl">
             Shaping the digital future, one code at a time.
           </h1>
@@ -82,7 +83,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container pt-12 pb-6 px-10 grid grid-cols-12 mx-auto w-full gap-6">
+        <div className="container pt-12 pb-6  lg:px-12 grid grid-cols-12 mx-auto w-full gap-6">
           {/* bio-card */}
           <Card shadow="lg" className="col-span-12 p-4 sm:col-span-8">
             <CardHeader className="justify-between">
@@ -117,11 +118,11 @@ export default function Home() {
               </Button>
             </CardHeader>
 
-            <Divider className="my-2" />
+            <Divider className="my-2 " />
             <CardBody className="px-3 overflow-hidden py-0 text-small text-default-500">
-              <p className="py-4">
-                Welcome to my portfolio website, I am an Associate Fullstack
-                Developer and AI enthusiast currently based in Canada{" "}
+              <p className="py-4  leading-loose">
+              I bring over 2 years of valuable IT experience, currently as an {""}<Chip color="danger" size="sm" variant="dot">Associate Fullstack Developer </Chip>{""}
+                Developer and {""}<Chip color="danger" size="sm" variant="dot">AI enthusiast </Chip> {""} based in Canada
                 <ReactCountryFlag
                   countryCode="CA"
                   svg
@@ -133,8 +134,8 @@ export default function Home() {
                     height: "1em",
                   }}
                   className="mr-2 "
-                />
-                CA but strongly rooted in Uganda{" "}
+                />{" "}
+                CA but strongly rooted in Uganda
                 <ReactCountryFlag
                   countryCode="UG"
                   svg
@@ -142,11 +143,11 @@ export default function Home() {
                   cdnSuffix="svg"
                   style={{
                     width: "2em",
-                    height: "1em",
+                    height: "1.5em",
                   }}
                   title="UG"
                   className="mr-2 "
-                />
+                />{""}
                 & India
                 <ReactCountryFlag
                   countryCode="IN"
@@ -157,16 +158,25 @@ export default function Home() {
                   className="mr-2 "
                   style={{
                     width: "2em",
-                    height: "1em",
+                    height: "1.5em",
                   }}
                 />
                 .
               </p>
-              <p className="py-4">
-              I bring over 2 years of valuable IT experience focused on maintaining and enhancing web-based applications through the entire Software Development Life Cycle (SDLC).  My expertise spans a wide array of programming languages, libraries, and frameworks, such as React.js, Angular.js, Gatsby.js, and Framer Motion, as well as back-end development with Node.js and Python. 
- Join me on this coding adventure!
+              <p className="pt-4 leading-loose">
+               My expertise spans a wide array of programming languages, libraries, & frameworks, such as 
+               {""} <Chip color="warning" size="sm" variant="faded">ReactJS</Chip>,
+               {""} <Chip color="warning" size="sm" variant="faded">AngularJS</Chip>,
+               {""} <Chip color="warning" size="sm" variant="faded">GatsbyJS</Chip> & 
+               {""} <Chip color="warning" size="sm" variant="faded">Framer Motion</Chip>,
+                 as well as back-end development with
+                 {""}  <Chip color="warning" size="sm" variant="faded">NodeJS</Chip>  & 
+                 {""} <Chip color="warning" size="sm" variant="faded">Python</Chip>, all implemented on maintaining & enhancing web-based applications through the entire
+                 Software Development Life Cycle (SDLC).
+ 
  
               </p>
+              <p className="py-4">Join me on this coding adventure!</p>
               
             </CardBody>
 
@@ -339,7 +349,7 @@ export default function Home() {
                 as={Link}
                 color="danger"
                 showAnchorIcon
-                variant="ghost"
+                variant="shadow"
                 onClick={saveFile}
               >
                 Download Resume
@@ -348,7 +358,7 @@ export default function Home() {
           </Card>
         </div>
 
-        <div className="container py-6 px-10 grid grid-cols-12 mx-auto w-full gap-6">
+        <div className="container py-6  lg:px-12 grid grid-cols-12 mx-auto w-full gap-6">
           {/* card-1 */}
           <Card
             isFooterBlurred
