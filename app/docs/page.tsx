@@ -230,7 +230,7 @@ export default function AboutPage() {
             <p className="text-tiny text-default-500">More details available soon.</p>
             <Button
             radius="lg"
-      href="https://github.com/nextui-org/nextui"
+      href="https://techise.ca/"
       as={Link}
       color="danger"
       showAnchorIcon
@@ -263,7 +263,7 @@ export default function AboutPage() {
             <p className="text-tiny text-default-500">More details available soon.</p>
             <Button
             radius="lg"
-      href="https://github.com/nextui-org/nextui"
+      href="https://disinfectsolutions.ca/"
       as={Link}
       color="danger"
       showAnchorIcon
@@ -357,7 +357,7 @@ export default function AboutPage() {
               <p className="text-tiny text-default-500">More details available soon.</p>
               <Button
             radius="lg"
-      href="https://github.com/nextui-org/nextui"
+      href="https://boozeonwheels.ca/"
       as={Link}
       color="danger"
       showAnchorIcon
