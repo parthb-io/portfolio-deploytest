@@ -30,8 +30,8 @@ export default function BlogPage() {
                       isBlurred
                       width={800}
                       height={800}
-                      src="profilePic.jpeg"
-                      alt="NextUI Album Cover"
+                      src="pic1.jpg"
+                      alt="Profile Picture"
                       className="m-5 aspect-square rotate-3 "
                     />
                   </div>

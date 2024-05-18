@@ -26,7 +26,7 @@ import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
   const saveFile = () => {
-    saveAs("resume.pdf");
+    saveAs("resume-swe2.pdf");
   };
 
   const [value, setValue] = React.useState(0);
