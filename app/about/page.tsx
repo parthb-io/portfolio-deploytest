@@ -30,7 +30,7 @@ export default function BlogPage() {
                       isBlurred
                       width={800}
                       height={800}
-                      src="pic1.jpg"
+                      src="profilepic.jpeg"
                       alt="Profile Picture"
                       className="m-5 aspect-square rotate-3 "
                     />
